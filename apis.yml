@@ -1,0 +1,43 @@
+aid: aws-step-functions
+name: AWS Step Functions
+description: >-
+  AWS Step Functions is a serverless orchestration service that lets you
+  coordinate distributed applications and microservices using visual workflows,
+  integrating with AWS services and supporting error handling and retries.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - iPaaS
+  - Orchestration
+  - Serverless
+  - AWS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: aws-step-functions:aws-step-functions
+    name: AWS Step Functions
+    description: >-
+      AWS Step Functions is a serverless orchestration service that lets you
+      coordinate distributed applications and microservices using visual workflows,
+      integrating with AWS services and supporting error handling and retries.
+    humanURL: https://aws.amazon.com/step-functions/
+    tags:
+      - iPaaS
+      - Orchestration
+      - Serverless
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/step-functions/
+      - type: Getting Started
+        url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
+common:
+  - type: Website
+    url: https://aws.amazon.com/step-functions/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/step-functions/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
