@@ -7,10 +7,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - AWS
   - iPaaS
   - Orchestration
   - Serverless
-  - AWS
 url: >-
   https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml
 created: '2026-03-27'
