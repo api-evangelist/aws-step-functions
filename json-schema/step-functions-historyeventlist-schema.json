@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HistoryEventList",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "timestamp": {},
+      "type": {},
+      "id": {},
+      "previousEventId": {},
+      "activityFailedEventDetails": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveError"
+              },
+              {
+                "description": "The error code of the failure."
+              }
+            ]
+          },
+          "cause": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveCause"
+              },
+              {
+                "description": "A more detailed explanation of the cause of the failure."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about an activity that failed during an execution."
+      },
+      "activityScheduleFailedEventDetails": {},
+      "activityScheduledEventDetails": {
+        "type": "object",
+        "properties": {
+          "resource": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Arn"
+              },
+              {
+                "description": "The Amazon Resource Name (ARN) of the scheduled activity."
+              }
+            ]
+          },
+          "input": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveData"
+              },
+              {
+                "description": "The JSON data input to the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding."
+              }
+            ]
+          },
+          "inputDetails": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HistoryEventExecutionDataDetails"
+              },
+              {
+                "description": "Contains details about the input for an execution history event."
+              }
+            ]
+          },
+          "timeoutInSeconds": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TimeoutInSeconds"
+              },
+              {
+                "description": "The maximum allowed duration of the activity task."
+              }
+            ]
+          },
+          "heartbeatInSeconds": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TimeoutInSeconds"
+              },
+              {
+                "description": "The maximum allowed duration between two heartbeats for the activity task."
+              }
+            ]
+          }
+        },
+        "required": [
+          "resource"
+        ],
+        "description": "Contains details about an activity scheduled during an execution."
+      },
+      "activityStartedEventDetails": {
+        "type": "object",
+        "properties": {
+          "workerName": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Identity"
+              },
+              {
+                "description": "The name of the worker that the task is assigned to. These names are provided by the workers when calling <a>GetActivityTask</a>."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about the start of an activity during an execution."
+      },
+      "activitySucceededEventDetails": {
+        "type": "object",
+        "properties": {
+          "output": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveData"
+              },
+              {
+                "description": "The JSON data output by the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding."
+              }
+            ]
+          },
+          "outputDetails": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HistoryEventExecutionDataDetails"
+              },
+              {
+                "description": "Contains details about the output of an execution history event."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about an activity that successfully terminated during an execution."
+      },
+      "activityTimedOutEventDetails": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveError"
+              },
+              {
+                "description": "The error code of the failure."
+              }
+            ]
+          },
+          "cause": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveCause"
+              },
+              {
+                "description": "A more detailed explanation of the cause of the timeout."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about an activity timeout that occurred during an execution."
+      },
+      "taskFailedEventDetails": {},
+      "taskScheduledEventDetails": {},
+      "taskStartFailedEventDetails": {},
+      "taskStartedEventDetails": {},
+      "taskSubmitFailedEventDetails": {},
+      "taskSubmittedEventDetails": {},
+      "taskSucceededEventDetails": {},
+      "taskTimedOutEventDetails": {},
+      "executionFailedEventDetails": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveError"
+              },
+              {
+                "description": "The error code of the failure."
+              }
+            ]
+          },
+          "cause": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveCause"
+              },
+              {
+                "description": "A more detailed explanation of the cause of the failure."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about an execution failure event."
+      },
+      "executionStartedEventDetails": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SensitiveData"
+              },
+              {
+                "description": "The JSON data input to the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding."
+              }
+            ]
+          },
+          "inputDetails": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/HistoryEventExecutionDataDetails"
+              },
+              {
+                "description": "Contains details about the input for an execution history event."
+              }
+            ]
+          },
+          "roleArn": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Arn"
+              },
+              {
+                "description": "The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks."
+              }
+            ]
+          }
+        },
+        "description": "Contains details about the start of the execution."
+      }
+    },
+    "required": [
+      "timestamp",
+      "type",
+      "id"
+    ],
+    "description": "Contains details about the events of an execution."
+  },
+  "description": "Contains details about the events that occurred during an execution."
+}

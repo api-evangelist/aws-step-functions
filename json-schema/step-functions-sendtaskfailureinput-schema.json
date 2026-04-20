@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SendTaskFailureInput",
+  "type": "object",
+  "properties": {
+    "taskToken": {},
+    "error": {},
+    "cause": {}
+  },
+  "required": [
+    "taskToken"
+  ]
+}

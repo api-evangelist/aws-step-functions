@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskSucceededEventDetails",
+  "type": "object",
+  "properties": {
+    "resourceType": {},
+    "resource": {},
+    "output": {},
+    "outputDetails": {}
+  },
+  "required": [
+    "resourceType",
+    "resource"
+  ],
+  "description": "Contains details about the successful completion of a task state."
+}

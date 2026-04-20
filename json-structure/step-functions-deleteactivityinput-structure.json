@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "DeleteActivityInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "activityArn",
+      "type": "string"
+    }
+  ]
+}

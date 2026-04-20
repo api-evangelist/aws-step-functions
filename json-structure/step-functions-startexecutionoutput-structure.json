@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "StartExecutionOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "startDate",
+      "type": "string"
+    }
+  ]
+}

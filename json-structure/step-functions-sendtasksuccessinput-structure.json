@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "SendTaskSuccessInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "taskToken",
+      "type": "string"
+    },
+    {
+      "name": "output",
+      "type": "string"
+    }
+  ]
+}

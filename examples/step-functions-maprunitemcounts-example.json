@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapRunItemCounts",
+  "example": {
+    "pending": null,
+    "running": null,
+    "succeeded": null,
+    "failed": null,
+    "timedOut": null,
+    "aborted": null
+  }
+}

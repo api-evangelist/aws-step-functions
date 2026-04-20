@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ListExecutionsInput",
+  "type": "object",
+  "properties": {
+    "stateMachineArn": {},
+    "statusFilter": {},
+    "maxResults": {},
+    "nextToken": {},
+    "mapRunArn": {}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "HistoryEventList",
+  "type": "array",
+  "description": "Contains details about the events that occurred during an execution."
+}

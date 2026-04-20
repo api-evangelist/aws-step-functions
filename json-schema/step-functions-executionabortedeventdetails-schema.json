@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutionAbortedEventDetails",
+  "type": "object",
+  "properties": {
+    "error": {},
+    "cause": {}
+  },
+  "description": "Contains details about an abort of an execution."
+}

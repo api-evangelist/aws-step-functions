@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "TaskStartedEventDetails",
+  "type": "object",
+  "description": "Contains details about the start of a task during an execution.",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "resource",
+      "type": "string"
+    }
+  ]
+}

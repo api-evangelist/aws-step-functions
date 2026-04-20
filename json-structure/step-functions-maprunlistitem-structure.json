@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "MapRunListItem",
+  "type": "object",
+  "description": "Contains details about a specific Map Run.",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    },
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "startDate",
+      "type": "string"
+    },
+    {
+      "name": "stopDate",
+      "type": "string"
+    }
+  ]
+}

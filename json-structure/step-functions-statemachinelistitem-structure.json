@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "StateMachineListItem",
+  "type": "object",
+  "description": "Contains details about the state machine.",
+  "fields": [
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "creationDate",
+      "type": "string"
+    }
+  ]
+}

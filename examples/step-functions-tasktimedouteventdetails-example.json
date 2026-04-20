@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskTimedOutEventDetails",
+  "example": {
+    "resourceType": null,
+    "resource": null,
+    "error": null,
+    "cause": null
+  }
+}

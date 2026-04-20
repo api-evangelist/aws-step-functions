@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "DescribeExecutionOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "startDate",
+      "type": "string"
+    },
+    {
+      "name": "stopDate",
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "type": "string"
+    },
+    {
+      "name": "inputDetails",
+      "type": "object",
+      "description": "Provides details about execution input or output."
+    },
+    {
+      "name": "output",
+      "type": "string"
+    },
+    {
+      "name": "outputDetails",
+      "type": "object",
+      "description": "Provides details about execution input or output."
+    },
+    {
+      "name": "traceHeader",
+      "type": "string"
+    },
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    },
+    {
+      "name": "error",
+      "type": "string"
+    },
+    {
+      "name": "cause",
+      "type": "string"
+    }
+  ]
+}

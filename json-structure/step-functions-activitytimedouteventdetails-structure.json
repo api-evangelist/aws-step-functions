@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ActivityTimedOutEventDetails",
+  "type": "object",
+  "description": "Contains details about an activity timeout that occurred during an execution.",
+  "fields": [
+    {
+      "name": "error",
+      "type": "string"
+    },
+    {
+      "name": "cause",
+      "type": "string"
+    }
+  ]
+}

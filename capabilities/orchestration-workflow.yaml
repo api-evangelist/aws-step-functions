@@ -1,0 +1,66 @@
+naftiko: "1.0.0-alpha1"
+info:
+  label: AWS Step Functions Orchestration Workflow
+  description: Workflow capability for managing state machines and executions with AWS Step Functions.
+  tags:
+    - Orchestration
+    - Serverless
+    - Workflows
+    - State Machine
+  created: "2026-04-19"
+  modified: "2026-04-19"
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+capability:
+  consumes:
+    - import: step-functions
+      location: ./shared/step-functions.yaml
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: workflow-api
+      resources:
+        - label: Create State Machine
+          method: POST
+          path: /state-machines
+        - label: List State Machines
+          method: GET
+          path: /state-machines
+        - label: Delete State Machine
+          method: DELETE
+          path: /state-machines/{arn}
+        - label: Start Execution
+          method: POST
+          path: /executions
+        - label: Stop Execution
+          method: DELETE
+          path: /executions/{arn}
+        - label: Describe Execution
+          method: GET
+          path: /executions/{arn}
+        - label: List Executions
+          method: GET
+          path: /executions
+    - type: mcp
+      port: 9090
+      namespace: workflow-mcp
+      transport: http
+      tools:
+        - name: create_state_machine
+          description: Create a new Step Functions state machine
+        - name: list_state_machines
+          description: List all Step Functions state machines
+        - name: delete_state_machine
+          description: Delete a Step Functions state machine
+        - name: start_execution
+          description: Start an execution of a state machine
+        - name: stop_execution
+          description: Stop a running state machine execution
+        - name: describe_execution
+          description: Get details about a state machine execution
+        - name: list_executions
+          description: List executions for a state machine

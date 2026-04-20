@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapIterationEventDetails",
+  "type": "object",
+  "properties": {
+    "name": {},
+    "index": {}
+  },
+  "description": "Contains details about an iteration of a Map state."
+}

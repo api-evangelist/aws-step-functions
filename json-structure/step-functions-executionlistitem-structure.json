@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ExecutionListItem",
+  "type": "object",
+  "description": "Contains details about an execution.",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "startDate",
+      "type": "string"
+    },
+    {
+      "name": "stopDate",
+      "type": "string"
+    },
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    },
+    {
+      "name": "itemCount",
+      "type": "string"
+    }
+  ]
+}

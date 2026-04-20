@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "GetExecutionHistoryOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "events",
+      "type": "string"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    }
+  ]
+}

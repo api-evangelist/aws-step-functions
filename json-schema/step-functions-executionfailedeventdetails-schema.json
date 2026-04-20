@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutionFailedEventDetails",
+  "type": "object",
+  "properties": {
+    "error": {},
+    "cause": {}
+  },
+  "description": "Contains details about an execution failure event."
+}

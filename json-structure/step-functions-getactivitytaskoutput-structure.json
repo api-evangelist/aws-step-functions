@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "GetActivityTaskOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "taskToken",
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "type": "string"
+    }
+  ]
+}

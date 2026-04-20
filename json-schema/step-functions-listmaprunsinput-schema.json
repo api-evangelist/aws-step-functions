@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ListMapRunsInput",
+  "type": "object",
+  "properties": {
+    "executionArn": {},
+    "maxResults": {},
+    "nextToken": {}
+  },
+  "required": [
+    "executionArn"
+  ]
+}

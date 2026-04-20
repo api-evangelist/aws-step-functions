@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LogLevel",
+  "type": "string",
+  "enum": [
+    "ALL",
+    "ERROR",
+    "FATAL",
+    "OFF"
+  ]
+}

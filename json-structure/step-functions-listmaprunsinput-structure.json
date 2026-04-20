@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ListMapRunsInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "maxResults",
+      "type": "string"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    }
+  ]
+}

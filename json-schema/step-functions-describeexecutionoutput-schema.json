@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DescribeExecutionOutput",
+  "type": "object",
+  "properties": {
+    "executionArn": {},
+    "stateMachineArn": {},
+    "name": {},
+    "status": {},
+    "startDate": {},
+    "stopDate": {},
+    "input": {},
+    "inputDetails": {
+      "type": "object",
+      "properties": {
+        "included": {}
+      },
+      "description": "Provides details about execution input or output."
+    },
+    "output": {},
+    "outputDetails": {
+      "type": "object",
+      "properties": {
+        "included": {}
+      },
+      "description": "Provides details about execution input or output."
+    },
+    "traceHeader": {},
+    "mapRunArn": {},
+    "error": {},
+    "cause": {}
+  },
+  "required": [
+    "executionArn",
+    "stateMachineArn",
+    "status",
+    "startDate"
+  ]
+}

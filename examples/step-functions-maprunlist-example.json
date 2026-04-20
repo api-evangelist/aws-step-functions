@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapRunList",
+  "example": [
+    {
+      "executionArn": null,
+      "mapRunArn": null,
+      "stateMachineArn": null,
+      "startDate": null,
+      "stopDate": null
+    }
+  ]
+}

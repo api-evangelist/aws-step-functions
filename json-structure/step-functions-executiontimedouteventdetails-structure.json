@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ExecutionTimedOutEventDetails",
+  "type": "object",
+  "description": "Contains details about the execution timeout that occurred during the execution.",
+  "fields": [
+    {
+      "name": "error",
+      "type": "string"
+    },
+    {
+      "name": "cause",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LambdaFunctionStartFailedEventDetails",
+  "type": "object",
+  "properties": {
+    "error": {},
+    "cause": {}
+  },
+  "description": "Contains details about a lambda function that failed to start during an execution."
+}

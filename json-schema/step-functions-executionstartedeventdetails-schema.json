@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutionStartedEventDetails",
+  "type": "object",
+  "properties": {
+    "input": {},
+    "inputDetails": {},
+    "roleArn": {}
+  },
+  "description": "Contains details about the start of the execution."
+}

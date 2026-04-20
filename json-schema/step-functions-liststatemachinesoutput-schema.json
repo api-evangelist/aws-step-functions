@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ListStateMachinesOutput",
+  "type": "object",
+  "properties": {
+    "stateMachines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stateMachineArn": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Arn"
+              },
+              {
+                "description": "The Amazon Resource Name (ARN) that identifies the state machine."
+              }
+            ]
+          },
+          "name": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Name"
+              },
+              {
+                "description": "<p>The name of the state machine.</p> <p>A name must <i>not</i> contain:</p> <ul> <li> <p>white space</p> </li> <li> <p>brackets <code>&lt; &gt; { } [ ]</code> </p> </li> <li> <p>wildcard characters <code>? *</code> </p> </li> <li> <p>special characters <code>\" # % \\ ^ | ~ ` $ &amp; , ; : /</code> </p> </li> <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li> </ul> <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>"
+              }
+            ]
+          },
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/StateMachineType"
+              },
+              {
+                "description": "<p/>"
+              }
+            ]
+          },
+          "creationDate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Timestamp"
+              },
+              {
+                "description": "The date the state machine is created."
+              }
+            ]
+          }
+        },
+        "required": [
+          "stateMachineArn",
+          "name",
+          "type",
+          "creationDate"
+        ],
+        "description": "Contains details about the state machine."
+      }
+    },
+    "nextToken": {}
+  },
+  "required": [
+    "stateMachines"
+  ]
+}

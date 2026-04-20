@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskTimedOutEventDetails",
+  "type": "object",
+  "properties": {
+    "resourceType": {},
+    "resource": {},
+    "error": {},
+    "cause": {}
+  },
+  "required": [
+    "resourceType",
+    "resource"
+  ],
+  "description": "Contains details about a resource timeout that occurred during an execution."
+}

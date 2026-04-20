@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapRunExecutionCounts",
+  "type": "object",
+  "properties": {
+    "pending": {},
+    "running": {},
+    "succeeded": {},
+    "failed": {},
+    "timedOut": {},
+    "aborted": {},
+    "total": {},
+    "resultsWritten": {}
+  },
+  "required": [
+    "pending",
+    "running",
+    "succeeded",
+    "failed",
+    "timedOut",
+    "aborted",
+    "total",
+    "resultsWritten"
+  ],
+  "description": "Contains details about all of the child workflow executions started by a Map Run."
+}

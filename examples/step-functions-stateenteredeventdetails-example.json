@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StateEnteredEventDetails",
+  "example": {
+    "name": null,
+    "input": null,
+    "inputDetails": null
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ToleratedFailurePercentage",
+  "type": "number",
+  "format": "float",
+  "minimum": 0,
+  "maximum": 100
+}

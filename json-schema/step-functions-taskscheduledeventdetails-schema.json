@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskScheduledEventDetails",
+  "type": "object",
+  "properties": {
+    "resourceType": {},
+    "resource": {},
+    "region": {},
+    "parameters": {},
+    "timeoutInSeconds": {},
+    "heartbeatInSeconds": {},
+    "taskCredentials": {}
+  },
+  "required": [
+    "resourceType",
+    "resource",
+    "region",
+    "parameters"
+  ],
+  "description": "Contains details about a task scheduled during an execution."
+}

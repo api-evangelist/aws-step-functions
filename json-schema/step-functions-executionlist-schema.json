@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutionList",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "executionArn": {},
+      "stateMachineArn": {},
+      "name": {},
+      "status": {},
+      "startDate": {},
+      "stopDate": {},
+      "mapRunArn": {},
+      "itemCount": {}
+    },
+    "required": [
+      "executionArn",
+      "stateMachineArn",
+      "name",
+      "status",
+      "startDate"
+    ],
+    "description": "Contains details about an execution."
+  }
+}

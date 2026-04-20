@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ExecutionSucceededEventDetails",
+  "type": "object",
+  "description": "Contains details about the successful termination of the execution.",
+  "fields": [
+    {
+      "name": "output",
+      "type": "string"
+    },
+    {
+      "name": "outputDetails",
+      "type": "string"
+    }
+  ]
+}

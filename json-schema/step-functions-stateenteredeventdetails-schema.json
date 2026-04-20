@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StateEnteredEventDetails",
+  "type": "object",
+  "properties": {
+    "name": {},
+    "input": {},
+    "inputDetails": {}
+  },
+  "required": [
+    "name"
+  ],
+  "description": "Contains details about a state entered during an execution."
+}

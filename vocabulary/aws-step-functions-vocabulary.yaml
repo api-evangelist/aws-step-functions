@@ -1,0 +1,66 @@
+vocabulary:
+  title: AWS Step Functions Vocabulary
+  description: Controlled vocabulary for AWS Step Functions orchestration concepts
+  created: "2026-04-19"
+  modified: "2026-04-19"
+  terms:
+    - term: State Machine
+      definition: A workflow defined in Amazon States Language (ASL) that coordinates components of distributed applications.
+      tags:
+        - Core
+        - Workflow
+    - term: Execution
+      definition: An instance of a state machine that processes input and produces output according to the state machine definition.
+      tags:
+        - Core
+        - Runtime
+    - term: State
+      definition: A single unit of work in a state machine definition. Can be a Task, Choice, Wait, Succeed, Fail, Parallel, or Map state.
+      tags:
+        - Core
+        - Workflow
+    - term: Task State
+      definition: A state that represents a single unit of work performed by a state machine, typically invoking a Lambda function or AWS service.
+      tags:
+        - Workflow
+    - term: Amazon States Language
+      definition: A JSON-based structured language used to define state machines in AWS Step Functions.
+      tags:
+        - Configuration
+        - Core
+    - term: Activity
+      definition: A way to associate code running somewhere with a specific task in Step Functions.
+      tags:
+        - Runtime
+    - term: Retry
+      definition: A configuration on Task states that automatically retries failed tasks with configurable backoff.
+      tags:
+        - Error Handling
+    - term: Catch
+      definition: Error handling configuration that transitions to a fallback state when specific errors occur.
+      tags:
+        - Error Handling
+    - term: Parallel State
+      definition: A state that creates parallel branches of execution running simultaneously.
+      tags:
+        - Workflow
+        - Concurrency
+    - term: Map State
+      definition: A state that iterates over an array of items and processes each item using a sub-state machine.
+      tags:
+        - Workflow
+        - Iteration
+    - term: Express Workflow
+      definition: A type of state machine optimized for high-volume, short-duration workloads with at-least-once execution semantics.
+      tags:
+        - Configuration
+        - Performance
+    - term: Standard Workflow
+      definition: A type of state machine for long-running workflows with exactly-once execution semantics.
+      tags:
+        - Configuration
+    - term: Wait State
+      definition: A state that pauses execution for a specified time or until a specific time.
+      tags:
+        - Workflow
+        - Time

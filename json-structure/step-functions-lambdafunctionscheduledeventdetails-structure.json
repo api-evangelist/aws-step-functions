@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "LambdaFunctionScheduledEventDetails",
+  "type": "object",
+  "description": "Contains details about a Lambda function scheduled during an execution.",
+  "fields": [
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "type": "string"
+    },
+    {
+      "name": "inputDetails",
+      "type": "string"
+    },
+    {
+      "name": "timeoutInSeconds",
+      "type": "string"
+    },
+    {
+      "name": "taskCredentials",
+      "type": "string"
+    }
+  ]
+}

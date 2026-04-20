@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "HistoryEvent",
+  "type": "object",
+  "description": "Contains details about the events of an execution.",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "previousEventId",
+      "type": "string"
+    },
+    {
+      "name": "activityFailedEventDetails",
+      "type": "object",
+      "description": "Contains details about an activity that failed during an execution."
+    },
+    {
+      "name": "activityScheduleFailedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "activityScheduledEventDetails",
+      "type": "object",
+      "description": "Contains details about an activity scheduled during an execution."
+    },
+    {
+      "name": "activityStartedEventDetails",
+      "type": "object",
+      "description": "Contains details about the start of an activity during an execution."
+    },
+    {
+      "name": "activitySucceededEventDetails",
+      "type": "object",
+      "description": "Contains details about an activity that successfully terminated during an execution."
+    },
+    {
+      "name": "activityTimedOutEventDetails",
+      "type": "object",
+      "description": "Contains details about an activity timeout that occurred during an execution."
+    },
+    {
+      "name": "taskFailedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskScheduledEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskStartFailedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskStartedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskSubmitFailedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskSubmittedEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskSucceededEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "taskTimedOutEventDetails",
+      "type": "string"
+    },
+    {
+      "name": "executionFailedEventDetails",
+      "type": "object",
+      "description": "Contains details about an execution failure event."
+    },
+    {
+      "name": "executionStartedEventDetails",
+      "type": "object",
+      "description": "Contains details about the start of the execution."
+    }
+  ]
+}

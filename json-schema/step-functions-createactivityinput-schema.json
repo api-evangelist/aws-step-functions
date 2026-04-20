@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateActivityInput",
+  "type": "object",
+  "properties": {
+    "name": {},
+    "tags": {}
+  },
+  "required": [
+    "name"
+  ]
+}

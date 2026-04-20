@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "BillingDetails",
+  "type": "object",
+  "description": "An object that describes workflow billing details.",
+  "fields": [
+    {
+      "name": "billedMemoryUsedInMB",
+      "type": "string"
+    },
+    {
+      "name": "billedDurationInMilliseconds",
+      "type": "string"
+    }
+  ]
+}

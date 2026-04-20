@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CloudWatchLogsLogGroup",
+  "type": "object",
+  "properties": {
+    "logGroupArn": {}
+  },
+  "description": "<p/>"
+}

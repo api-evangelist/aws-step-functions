@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BillingDetails",
+  "type": "object",
+  "properties": {
+    "billedMemoryUsedInMB": {},
+    "billedDurationInMilliseconds": {}
+  },
+  "description": "An object that describes workflow billing details."
+}

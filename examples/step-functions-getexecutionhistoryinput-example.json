@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GetExecutionHistoryInput",
+  "example": {
+    "executionArn": null,
+    "maxResults": null,
+    "reverseOrder": null,
+    "nextToken": null,
+    "includeExecutionData": null
+  }
+}

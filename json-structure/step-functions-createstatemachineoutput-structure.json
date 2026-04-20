@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "CreateStateMachineOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "creationDate",
+      "type": "string"
+    }
+  ]
+}

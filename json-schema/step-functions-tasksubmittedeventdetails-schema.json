@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskSubmittedEventDetails",
+  "type": "object",
+  "properties": {
+    "resourceType": {},
+    "resource": {},
+    "output": {},
+    "outputDetails": {}
+  },
+  "required": [
+    "resourceType",
+    "resource"
+  ],
+  "description": "Contains details about a task submitted to a resource ."
+}

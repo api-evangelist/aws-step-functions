@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapRunListItem",
+  "type": "object",
+  "properties": {
+    "executionArn": {},
+    "mapRunArn": {},
+    "stateMachineArn": {},
+    "startDate": {},
+    "stopDate": {}
+  },
+  "required": [
+    "executionArn",
+    "mapRunArn",
+    "stateMachineArn",
+    "startDate"
+  ],
+  "description": "Contains details about a specific Map Run."
+}

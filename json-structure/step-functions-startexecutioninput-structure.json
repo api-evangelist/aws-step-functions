@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "StartExecutionInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "type": "string"
+    },
+    {
+      "name": "traceHeader",
+      "type": "string"
+    }
+  ]
+}

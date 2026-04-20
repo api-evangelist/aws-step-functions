@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "TaskSucceededEventDetails",
+  "type": "object",
+  "description": "Contains details about the successful completion of a task state.",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "output",
+      "type": "string"
+    },
+    {
+      "name": "outputDetails",
+      "type": "string"
+    }
+  ]
+}

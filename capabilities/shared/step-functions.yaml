@@ -1,0 +1,48 @@
+naftiko: "1.0.0-alpha1"
+info:
+  label: AWS Step Functions
+  description: Shared capability definitions for AWS Step Functions state machine orchestration.
+  tags:
+    - Orchestration
+    - Serverless
+    - Workflows
+  created: "2026-04-19"
+  modified: "2026-04-19"
+capability:
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: step-functions-api
+      resources:
+        - label: Create State Machine
+          method: POST
+          path: /
+          operationId: CreateStateMachine
+        - label: Describe State Machine
+          method: POST
+          path: /
+          operationId: DescribeStateMachine
+        - label: Delete State Machine
+          method: POST
+          path: /
+          operationId: DeleteStateMachine
+        - label: List State Machines
+          method: POST
+          path: /
+          operationId: ListStateMachines
+        - label: Start Execution
+          method: POST
+          path: /
+          operationId: StartExecution
+        - label: Stop Execution
+          method: POST
+          path: /
+          operationId: StopExecution
+        - label: Describe Execution
+          method: POST
+          path: /
+          operationId: DescribeExecution
+        - label: List Executions
+          method: POST
+          path: /
+          operationId: ListExecutions

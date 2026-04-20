@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StateExitedEventDetails",
+  "type": "object",
+  "properties": {
+    "name": {},
+    "output": {},
+    "outputDetails": {}
+  },
+  "required": [
+    "name"
+  ],
+  "description": "Contains details about an exit from a state during an execution."
+}

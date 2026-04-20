@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "GetExecutionHistoryInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "maxResults",
+      "type": "string"
+    },
+    {
+      "name": "reverseOrder",
+      "type": "string"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    },
+    {
+      "name": "includeExecutionData",
+      "type": "string"
+    }
+  ]
+}

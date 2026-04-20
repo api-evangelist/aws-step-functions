@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "LambdaFunctionScheduleFailedEventDetails",
+  "type": "object",
+  "description": "Contains details about a failed Lambda function schedule event that occurred during an execution.",
+  "fields": [
+    {
+      "name": "error",
+      "type": "string"
+    },
+    {
+      "name": "cause",
+      "type": "string"
+    }
+  ]
+}

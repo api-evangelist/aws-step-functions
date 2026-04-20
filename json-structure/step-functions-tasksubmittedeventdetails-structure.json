@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "TaskSubmittedEventDetails",
+  "type": "object",
+  "description": "Contains details about a task submitted to a resource .",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "output",
+      "type": "string"
+    },
+    {
+      "name": "outputDetails",
+      "type": "string"
+    }
+  ]
+}

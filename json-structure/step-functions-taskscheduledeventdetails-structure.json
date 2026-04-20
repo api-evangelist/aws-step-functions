@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "TaskScheduledEventDetails",
+  "type": "object",
+  "description": "Contains details about a task scheduled during an execution.",
+  "fields": [
+    {
+      "name": "resourceType",
+      "type": "string"
+    },
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "region",
+      "type": "string"
+    },
+    {
+      "name": "parameters",
+      "type": "string"
+    },
+    {
+      "name": "timeoutInSeconds",
+      "type": "string"
+    },
+    {
+      "name": "heartbeatInSeconds",
+      "type": "string"
+    },
+    {
+      "name": "taskCredentials",
+      "type": "string"
+    }
+  ]
+}

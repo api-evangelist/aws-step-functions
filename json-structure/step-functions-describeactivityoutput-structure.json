@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "DescribeActivityOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "activityArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "creationDate",
+      "type": "string"
+    }
+  ]
+}

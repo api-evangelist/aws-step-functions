@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "MapIterationEventDetails",
+  "type": "object",
+  "description": "Contains details about an iteration of a Map state.",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "index",
+      "type": "string"
+    }
+  ]
+}

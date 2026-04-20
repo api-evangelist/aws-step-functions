@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UpdateStateMachineInput",
+  "example": {
+    "stateMachineArn": null,
+    "definition": null,
+    "roleArn": null,
+    "loggingConfiguration": null,
+    "tracingConfiguration": null
+  }
+}

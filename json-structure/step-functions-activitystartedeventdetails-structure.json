@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ActivityStartedEventDetails",
+  "type": "object",
+  "description": "Contains details about the start of an activity during an execution.",
+  "fields": [
+    {
+      "name": "workerName",
+      "type": "string"
+    }
+  ]
+}

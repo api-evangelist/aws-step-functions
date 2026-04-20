@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskScheduledEventDetails",
+  "example": {
+    "resourceType": null,
+    "resource": null,
+    "region": null,
+    "parameters": null,
+    "timeoutInSeconds": null,
+    "heartbeatInSeconds": null
+  }
+}

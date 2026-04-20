@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "LambdaFunctionFailedEventDetails",
+  "type": "object",
+  "description": "Contains details about a Lambda function that failed during an execution.",
+  "fields": [
+    {
+      "name": "error",
+      "type": "string"
+    },
+    {
+      "name": "cause",
+      "type": "string"
+    }
+  ]
+}

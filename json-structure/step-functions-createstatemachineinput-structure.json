@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "CreateStateMachineInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "definition",
+      "type": "string"
+    },
+    {
+      "name": "roleArn",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "loggingConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "tags",
+      "type": "string"
+    },
+    {
+      "name": "tracingConfiguration",
+      "type": "string"
+    }
+  ]
+}

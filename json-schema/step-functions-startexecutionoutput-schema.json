@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StartExecutionOutput",
+  "type": "object",
+  "properties": {
+    "executionArn": {},
+    "startDate": {}
+  },
+  "required": [
+    "executionArn",
+    "startDate"
+  ]
+}

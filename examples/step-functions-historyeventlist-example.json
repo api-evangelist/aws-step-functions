@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HistoryEventList",
+  "example": [
+    {
+      "timestamp": null,
+      "type": null,
+      "id": null,
+      "previousEventId": null,
+      "activityFailedEventDetails": {
+        "error": null,
+        "cause": null
+      },
+      "activityScheduleFailedEventDetails": null
+    }
+  ]
+}

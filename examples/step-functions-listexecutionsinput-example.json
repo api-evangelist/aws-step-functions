@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ListExecutionsInput",
+  "example": {
+    "stateMachineArn": null,
+    "statusFilter": null,
+    "maxResults": null,
+    "nextToken": null,
+    "mapRunArn": null
+  }
+}

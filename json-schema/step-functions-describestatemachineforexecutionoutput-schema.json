@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DescribeStateMachineForExecutionOutput",
+  "type": "object",
+  "properties": {
+    "stateMachineArn": {},
+    "name": {},
+    "definition": {},
+    "roleArn": {},
+    "updateDate": {},
+    "loggingConfiguration": {
+      "type": "object",
+      "properties": {
+        "level": {},
+        "includeExecutionData": {},
+        "destinations": {}
+      },
+      "description": "The <code>LoggingConfiguration</code> data type is used to set CloudWatch Logs options."
+    },
+    "tracingConfiguration": {},
+    "mapRunArn": {},
+    "label": {}
+  },
+  "required": [
+    "stateMachineArn",
+    "name",
+    "definition",
+    "roleArn",
+    "updateDate"
+  ]
+}

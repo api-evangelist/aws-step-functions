@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DescribeMapRunOutput",
+  "type": "object",
+  "properties": {
+    "mapRunArn": {},
+    "executionArn": {},
+    "status": {},
+    "startDate": {},
+    "stopDate": {},
+    "maxConcurrency": {},
+    "toleratedFailurePercentage": {},
+    "toleratedFailureCount": {},
+    "itemCounts": {},
+    "executionCounts": {}
+  },
+  "required": [
+    "mapRunArn",
+    "executionArn",
+    "status",
+    "startDate",
+    "maxConcurrency",
+    "toleratedFailurePercentage",
+    "toleratedFailureCount",
+    "itemCounts",
+    "executionCounts"
+  ]
+}

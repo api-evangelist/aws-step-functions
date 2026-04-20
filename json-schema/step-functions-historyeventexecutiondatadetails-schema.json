@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HistoryEventExecutionDataDetails",
+  "type": "object",
+  "properties": {
+    "truncated": {}
+  },
+  "description": "Provides details about input or output in an execution history event."
+}

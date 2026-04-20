@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LambdaFunctionScheduleFailedEventDetails",
+  "type": "object",
+  "properties": {
+    "error": {},
+    "cause": {}
+  },
+  "description": "Contains details about a failed Lambda function schedule event that occurred during an execution."
+}

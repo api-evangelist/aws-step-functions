@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StartSyncExecutionOutput",
+  "example": {
+    "executionArn": null,
+    "stateMachineArn": null,
+    "name": null,
+    "startDate": null,
+    "stopDate": null,
+    "status": null
+  }
+}

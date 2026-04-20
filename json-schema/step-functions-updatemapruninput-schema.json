@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UpdateMapRunInput",
+  "type": "object",
+  "properties": {
+    "mapRunArn": {},
+    "maxConcurrency": {},
+    "toleratedFailurePercentage": {},
+    "toleratedFailureCount": {}
+  },
+  "required": [
+    "mapRunArn"
+  ]
+}

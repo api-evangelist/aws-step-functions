@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DescribeMapRunOutput",
+  "example": {
+    "mapRunArn": null,
+    "executionArn": null,
+    "status": null,
+    "startDate": null,
+    "stopDate": null,
+    "maxConcurrency": null
+  }
+}

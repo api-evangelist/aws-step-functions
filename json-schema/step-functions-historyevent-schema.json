@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HistoryEvent",
+  "type": "object",
+  "properties": {
+    "timestamp": {},
+    "type": {},
+    "id": {},
+    "previousEventId": {},
+    "activityFailedEventDetails": {
+      "type": "object",
+      "properties": {
+        "error": {},
+        "cause": {}
+      },
+      "description": "Contains details about an activity that failed during an execution."
+    },
+    "activityScheduleFailedEventDetails": {},
+    "activityScheduledEventDetails": {
+      "type": "object",
+      "properties": {
+        "resource": {},
+        "input": {},
+        "inputDetails": {},
+        "timeoutInSeconds": {},
+        "heartbeatInSeconds": {}
+      },
+      "required": [
+        "resource"
+      ],
+      "description": "Contains details about an activity scheduled during an execution."
+    },
+    "activityStartedEventDetails": {
+      "type": "object",
+      "properties": {
+        "workerName": {}
+      },
+      "description": "Contains details about the start of an activity during an execution."
+    },
+    "activitySucceededEventDetails": {
+      "type": "object",
+      "properties": {
+        "output": {},
+        "outputDetails": {}
+      },
+      "description": "Contains details about an activity that successfully terminated during an execution."
+    },
+    "activityTimedOutEventDetails": {
+      "type": "object",
+      "properties": {
+        "error": {},
+        "cause": {}
+      },
+      "description": "Contains details about an activity timeout that occurred during an execution."
+    },
+    "taskFailedEventDetails": {},
+    "taskScheduledEventDetails": {},
+    "taskStartFailedEventDetails": {},
+    "taskStartedEventDetails": {},
+    "taskSubmitFailedEventDetails": {},
+    "taskSubmittedEventDetails": {},
+    "taskSucceededEventDetails": {},
+    "taskTimedOutEventDetails": {},
+    "executionFailedEventDetails": {
+      "type": "object",
+      "properties": {
+        "error": {},
+        "cause": {}
+      },
+      "description": "Contains details about an execution failure event."
+    },
+    "executionStartedEventDetails": {
+      "type": "object",
+      "properties": {
+        "input": {},
+        "inputDetails": {},
+        "roleArn": {}
+      },
+      "description": "Contains details about the start of the execution."
+    }
+  },
+  "required": [
+    "timestamp",
+    "type",
+    "id"
+  ],
+  "description": "Contains details about the events of an execution."
+}

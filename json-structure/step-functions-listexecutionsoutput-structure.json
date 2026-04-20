@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ListExecutionsOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "executions",
+      "type": "string"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    }
+  ]
+}

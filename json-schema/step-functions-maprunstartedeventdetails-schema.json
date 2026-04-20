@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MapRunStartedEventDetails",
+  "type": "object",
+  "properties": {
+    "mapRunArn": {}
+  },
+  "description": "Contains details about a Map Run that was started during a state machine execution."
+}

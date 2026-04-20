@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActivityListItem",
+  "type": "object",
+  "properties": {
+    "activityArn": {},
+    "name": {},
+    "creationDate": {}
+  },
+  "required": [
+    "activityArn",
+    "name",
+    "creationDate"
+  ],
+  "description": "Contains details about an activity."
+}

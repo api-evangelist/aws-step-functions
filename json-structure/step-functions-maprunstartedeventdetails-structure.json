@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "MapRunStartedEventDetails",
+  "type": "object",
+  "description": "Contains details about a Map Run that was started during a state machine execution.",
+  "fields": [
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LoggingConfiguration",
+  "type": "object",
+  "properties": {
+    "level": {},
+    "includeExecutionData": {},
+    "destinations": {}
+  },
+  "description": "The <code>LoggingConfiguration</code> data type is used to set CloudWatch Logs options."
+}

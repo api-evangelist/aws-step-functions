@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActivityScheduleFailedEventDetails",
+  "type": "object",
+  "properties": {
+    "error": {},
+    "cause": {}
+  },
+  "description": "Contains details about an activity schedule failure that occurred during an execution."
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "DescribeMapRunOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    },
+    {
+      "name": "executionArn",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "startDate",
+      "type": "string"
+    },
+    {
+      "name": "stopDate",
+      "type": "string"
+    },
+    {
+      "name": "maxConcurrency",
+      "type": "string"
+    },
+    {
+      "name": "toleratedFailurePercentage",
+      "type": "string"
+    },
+    {
+      "name": "toleratedFailureCount",
+      "type": "string"
+    },
+    {
+      "name": "itemCounts",
+      "type": "string"
+    },
+    {
+      "name": "executionCounts",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CloudWatchEventsExecutionDataDetails",
+  "type": "object",
+  "properties": {
+    "included": {}
+  },
+  "description": "Provides details about execution input or output."
+}

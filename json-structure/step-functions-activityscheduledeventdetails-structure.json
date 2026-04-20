@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ActivityScheduledEventDetails",
+  "type": "object",
+  "description": "Contains details about an activity scheduled during an execution.",
+  "fields": [
+    {
+      "name": "resource",
+      "type": "string"
+    },
+    {
+      "name": "input",
+      "type": "string"
+    },
+    {
+      "name": "inputDetails",
+      "type": "string"
+    },
+    {
+      "name": "timeoutInSeconds",
+      "type": "string"
+    },
+    {
+      "name": "heartbeatInSeconds",
+      "type": "string"
+    }
+  ]
+}

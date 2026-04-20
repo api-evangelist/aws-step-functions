@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "StateExitedEventDetails",
+  "type": "object",
+  "description": "Contains details about an exit from a state during an execution.",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "output",
+      "type": "string"
+    },
+    {
+      "name": "outputDetails",
+      "type": "string"
+    }
+  ]
+}

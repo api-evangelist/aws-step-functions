@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "LogDestination",
+  "type": "object",
+  "description": "<p/>",
+  "fields": [
+    {
+      "name": "cloudWatchLogsLogGroup",
+      "type": "string"
+    }
+  ]
+}

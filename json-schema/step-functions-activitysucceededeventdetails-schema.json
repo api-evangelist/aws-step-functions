@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActivitySucceededEventDetails",
+  "type": "object",
+  "properties": {
+    "output": {},
+    "outputDetails": {}
+  },
+  "description": "Contains details about an activity that successfully terminated during an execution."
+}

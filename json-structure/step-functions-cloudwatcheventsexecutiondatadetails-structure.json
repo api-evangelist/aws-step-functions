@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "CloudWatchEventsExecutionDataDetails",
+  "type": "object",
+  "description": "Provides details about execution input or output.",
+  "fields": [
+    {
+      "name": "included",
+      "type": "string"
+    }
+  ]
+}

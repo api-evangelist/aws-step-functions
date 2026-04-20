@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "DescribeStateMachineOutput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "definition",
+      "type": "string"
+    },
+    {
+      "name": "roleArn",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "creationDate",
+      "type": "string"
+    },
+    {
+      "name": "loggingConfiguration",
+      "type": "object",
+      "description": "The <code>LoggingConfiguration</code> data type is used to set CloudWatch Logs options."
+    },
+    {
+      "name": "tracingConfiguration",
+      "type": "string"
+    },
+    {
+      "name": "label",
+      "type": "string"
+    }
+  ]
+}

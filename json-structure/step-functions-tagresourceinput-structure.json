@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "TagResourceInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "resourceArn",
+      "type": "string"
+    },
+    {
+      "name": "tags",
+      "type": "string"
+    }
+  ]
+}

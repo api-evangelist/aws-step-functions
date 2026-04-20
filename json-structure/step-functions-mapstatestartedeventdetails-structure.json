@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "MapStateStartedEventDetails",
+  "type": "object",
+  "description": "Details about a Map state that was started.",
+  "fields": [
+    {
+      "name": "length",
+      "type": "string"
+    }
+  ]
+}

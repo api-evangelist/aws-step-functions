@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ActivityListItem",
+  "type": "object",
+  "description": "Contains details about an activity.",
+  "fields": [
+    {
+      "name": "activityArn",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "creationDate",
+      "type": "string"
+    }
+  ]
+}

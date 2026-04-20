@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "UpdateMapRunInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    },
+    {
+      "name": "maxConcurrency",
+      "type": "string"
+    },
+    {
+      "name": "toleratedFailurePercentage",
+      "type": "string"
+    },
+    {
+      "name": "toleratedFailureCount",
+      "type": "string"
+    }
+  ]
+}

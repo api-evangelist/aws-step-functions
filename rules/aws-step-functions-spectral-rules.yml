@@ -1,0 +1,59 @@
+rules:
+  sfn-operation-summary:
+    description: All operations must have a summary starting with "AWS Step Functions"
+    severity: warn
+    given: "$.paths[*][get,post,put,delete,patch]"
+    then:
+      field: summary
+      function: pattern
+      functionOptions:
+        match: "^AWS Step Functions"
+  sfn-operation-id:
+    description: All operations must have an operationId
+    severity: error
+    given: "$.paths[*][get,post,put,delete,patch]"
+    then:
+      field: operationId
+      function: truthy
+  sfn-info-title:
+    description: Info object must have a title
+    severity: error
+    given: "$.info"
+    then:
+      field: title
+      function: truthy
+  sfn-info-version:
+    description: Info object must have a version
+    severity: error
+    given: "$.info"
+    then:
+      field: version
+      function: truthy
+  sfn-response-description:
+    description: All responses must have a description
+    severity: error
+    given: "$.paths[*][*].responses[*]"
+    then:
+      field: description
+      function: truthy
+  sfn-microcks-annotation:
+    description: Operations should have x-microcks-operation annotation
+    severity: info
+    given: "$.paths[*][get,post,put,delete,patch]"
+    then:
+      field: x-microcks-operation
+      function: truthy
+  sfn-schema-type:
+    description: Schema components should have a type
+    severity: warn
+    given: "$.components.schemas[*]"
+    then:
+      field: type
+      function: truthy
+  sfn-security-defined:
+    description: API security schemes should be defined
+    severity: warn
+    given: "$"
+    then:
+      field: components.securitySchemes
+      function: truthy

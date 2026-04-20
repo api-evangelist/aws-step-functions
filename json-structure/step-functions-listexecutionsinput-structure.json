@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ListExecutionsInput",
+  "type": "object",
+  "fields": [
+    {
+      "name": "stateMachineArn",
+      "type": "string"
+    },
+    {
+      "name": "statusFilter",
+      "type": "string"
+    },
+    {
+      "name": "maxResults",
+      "type": "string"
+    },
+    {
+      "name": "nextToken",
+      "type": "string"
+    },
+    {
+      "name": "mapRunArn",
+      "type": "string"
+    }
+  ]
+}

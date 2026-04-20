@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StateMachineList",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "stateMachineArn": {},
+      "name": {},
+      "type": {},
+      "creationDate": {}
+    },
+    "required": [
+      "stateMachineArn",
+      "name",
+      "type",
+      "creationDate"
+    ],
+    "description": "Contains details about the state machine."
+  }
+}

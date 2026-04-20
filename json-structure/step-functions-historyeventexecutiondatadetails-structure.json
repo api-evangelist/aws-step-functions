@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "HistoryEventExecutionDataDetails",
+  "type": "object",
+  "description": "Provides details about input or output in an execution history event.",
+  "fields": [
+    {
+      "name": "truncated",
+      "type": "string"
+    }
+  ]
+}

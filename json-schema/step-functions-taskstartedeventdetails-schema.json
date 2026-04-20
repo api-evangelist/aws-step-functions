@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskStartedEventDetails",
+  "type": "object",
+  "properties": {
+    "resourceType": {},
+    "resource": {}
+  },
+  "required": [
+    "resourceType",
+    "resource"
+  ],
+  "description": "Contains details about the start of a task during an execution."
+}

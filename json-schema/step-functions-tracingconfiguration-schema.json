@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TracingConfiguration",
+  "type": "object",
+  "properties": {
+    "enabled": {}
+  },
+  "description": "Selects whether or not the state machine's X-Ray tracing is enabled. Default is <code>false</code> "
+}

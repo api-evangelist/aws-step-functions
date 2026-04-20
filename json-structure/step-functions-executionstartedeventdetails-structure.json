@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "title": "ExecutionStartedEventDetails",
+  "type": "object",
+  "description": "Contains details about the start of the execution.",
+  "fields": [
+    {
+      "name": "input",
+      "type": "string"
+    },
+    {
+      "name": "inputDetails",
+      "type": "string"
+    },
+    {
+      "name": "roleArn",
+      "type": "string"
+    }
+  ]
+}
