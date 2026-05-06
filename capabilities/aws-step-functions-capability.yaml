@@ -1,0 +1,1070 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: AWS Step Functions
+  description: <fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components
+    of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications
+    from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change
+    applications quickly. Step Functions provides a console that helps visualize the components of your application as a series
+    of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your
+    app
+  tags:
+  - Aws
+  - Step
+  - Functions
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: aws-step-functions
+    baseUri: http://states.us-east-1.amazonaws.com
+    description: AWS Step Functions HTTP API.
+    authentication:
+      type: apikey
+      in: header
+      name: Authorization
+      value: '{{AWS_STEP_FUNCTIONS_TOKEN}}'
+    resources:
+    - name: x-amz-target-awsstepfunctions-createactivity
+      path: /#X-Amz-Target=AWSStepFunctions.CreateActivity
+      operations:
+      - name: createactivity
+        method: POST
+        description: AWS Step Functions - Create Activity
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-createstatemachine
+      path: /#X-Amz-Target=AWSStepFunctions.CreateStateMachine
+      operations:
+      - name: createstatemachine
+        method: POST
+        description: AWS Step Functions - Create State Machine
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-deleteactivity
+      path: /#X-Amz-Target=AWSStepFunctions.DeleteActivity
+      operations:
+      - name: deleteactivity
+        method: POST
+        description: AWS Step Functions - Delete Activity
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-deletestatemachine
+      path: /#X-Amz-Target=AWSStepFunctions.DeleteStateMachine
+      operations:
+      - name: deletestatemachine
+        method: POST
+        description: AWS Step Functions - Delete State Machine
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-describeactivity
+      path: /#X-Amz-Target=AWSStepFunctions.DescribeActivity
+      operations:
+      - name: describeactivity
+        method: POST
+        description: AWS Step Functions - Describe Activity
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-describeexecution
+      path: /#X-Amz-Target=AWSStepFunctions.DescribeExecution
+      operations:
+      - name: describeexecution
+        method: POST
+        description: AWS Step Functions - Describe Execution
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-describemaprun
+      path: /#X-Amz-Target=AWSStepFunctions.DescribeMapRun
+      operations:
+      - name: describemaprun
+        method: POST
+        description: AWS Step Functions - Describe Map Run
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-describestatemachi
+      path: /#X-Amz-Target=AWSStepFunctions.DescribeStateMachine
+      operations:
+      - name: describestatemachine
+        method: POST
+        description: AWS Step Functions - Describe State Machine
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-describestatemachi
+      path: /#X-Amz-Target=AWSStepFunctions.DescribeStateMachineForExecution
+      operations:
+      - name: describestatemachineforexecution
+        method: POST
+        description: AWS Step Functions - Describe State Machine for Execution
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-getactivitytask
+      path: /#X-Amz-Target=AWSStepFunctions.GetActivityTask
+      operations:
+      - name: getactivitytask
+        method: POST
+        description: AWS Step Functions - Get Activity Task
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-getexecutionhistor
+      path: /#X-Amz-Target=AWSStepFunctions.GetExecutionHistory
+      operations:
+      - name: getexecutionhistory
+        method: POST
+        description: AWS Step Functions - Get Execution History
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: nextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-listactivities
+      path: /#X-Amz-Target=AWSStepFunctions.ListActivities
+      operations:
+      - name: listactivities
+        method: POST
+        description: AWS Step Functions - List Activities
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: nextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-listexecutions
+      path: /#X-Amz-Target=AWSStepFunctions.ListExecutions
+      operations:
+      - name: listexecutions
+        method: POST
+        description: AWS Step Functions - List Executions
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: nextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-listmapruns
+      path: /#X-Amz-Target=AWSStepFunctions.ListMapRuns
+      operations:
+      - name: listmapruns
+        method: POST
+        description: AWS Step Functions - List Map Runs
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: nextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-liststatemachines
+      path: /#X-Amz-Target=AWSStepFunctions.ListStateMachines
+      operations:
+      - name: liststatemachines
+        method: POST
+        description: AWS Step Functions - List State Machines
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: string
+          description: Pagination limit
+        - name: nextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-listtagsforresourc
+      path: /#X-Amz-Target=AWSStepFunctions.ListTagsForResource
+      operations:
+      - name: listtagsforresource
+        method: POST
+        description: AWS Step Functions - List Tags for Resource
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-sendtaskfailure
+      path: /#X-Amz-Target=AWSStepFunctions.SendTaskFailure
+      operations:
+      - name: sendtaskfailure
+        method: POST
+        description: AWS Step Functions - Send Task Failure
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-sendtaskheartbeat
+      path: /#X-Amz-Target=AWSStepFunctions.SendTaskHeartbeat
+      operations:
+      - name: sendtaskheartbeat
+        method: POST
+        description: AWS Step Functions - Send Task Heartbeat
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-sendtasksuccess
+      path: /#X-Amz-Target=AWSStepFunctions.SendTaskSuccess
+      operations:
+      - name: sendtasksuccess
+        method: POST
+        description: AWS Step Functions - Send Task Success
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-startexecution
+      path: /#X-Amz-Target=AWSStepFunctions.StartExecution
+      operations:
+      - name: startexecution
+        method: POST
+        description: AWS Step Functions - Start Execution
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-startsyncexecution
+      path: /#X-Amz-Target=AWSStepFunctions.StartSyncExecution
+      operations:
+      - name: startsyncexecution
+        method: POST
+        description: AWS Step Functions - Start Sync Execution
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-stopexecution
+      path: /#X-Amz-Target=AWSStepFunctions.StopExecution
+      operations:
+      - name: stopexecution
+        method: POST
+        description: AWS Step Functions - Stop Execution
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-tagresource
+      path: /#X-Amz-Target=AWSStepFunctions.TagResource
+      operations:
+      - name: tagresource
+        method: POST
+        description: AWS Step Functions - Tag Resource
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-untagresource
+      path: /#X-Amz-Target=AWSStepFunctions.UntagResource
+      operations:
+      - name: untagresource
+        method: POST
+        description: AWS Step Functions - Untag Resource
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-updatemaprun
+      path: /#X-Amz-Target=AWSStepFunctions.UpdateMapRun
+      operations:
+      - name: updatemaprun
+        method: POST
+        description: AWS Step Functions - Update Map Run
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: x-amz-target-awsstepfunctions-updatestatemachine
+      path: /#X-Amz-Target=AWSStepFunctions.UpdateStateMachine
+      operations:
+      - name: updatestatemachine
+        method: POST
+        description: AWS Step Functions - Update State Machine
+        inputParameters:
+        - name: X-Amz-Target
+          in: header
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: aws-step-functions-rest
+    description: REST adapter for AWS Step Functions.
+    resources:
+    - path: /#X-Amz-Target=AWSStepFunctions.CreateActivity
+      name: createactivity
+      operations:
+      - method: POST
+        name: createactivity
+        description: AWS Step Functions - Create Activity
+        call: aws-step-functions.createactivity
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.CreateStateMachine
+      name: createstatemachine
+      operations:
+      - method: POST
+        name: createstatemachine
+        description: AWS Step Functions - Create State Machine
+        call: aws-step-functions.createstatemachine
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DeleteActivity
+      name: deleteactivity
+      operations:
+      - method: POST
+        name: deleteactivity
+        description: AWS Step Functions - Delete Activity
+        call: aws-step-functions.deleteactivity
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DeleteStateMachine
+      name: deletestatemachine
+      operations:
+      - method: POST
+        name: deletestatemachine
+        description: AWS Step Functions - Delete State Machine
+        call: aws-step-functions.deletestatemachine
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DescribeActivity
+      name: describeactivity
+      operations:
+      - method: POST
+        name: describeactivity
+        description: AWS Step Functions - Describe Activity
+        call: aws-step-functions.describeactivity
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DescribeExecution
+      name: describeexecution
+      operations:
+      - method: POST
+        name: describeexecution
+        description: AWS Step Functions - Describe Execution
+        call: aws-step-functions.describeexecution
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DescribeMapRun
+      name: describemaprun
+      operations:
+      - method: POST
+        name: describemaprun
+        description: AWS Step Functions - Describe Map Run
+        call: aws-step-functions.describemaprun
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DescribeStateMachine
+      name: describestatemachine
+      operations:
+      - method: POST
+        name: describestatemachine
+        description: AWS Step Functions - Describe State Machine
+        call: aws-step-functions.describestatemachine
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.DescribeStateMachineForExecution
+      name: describestatemachineforexecution
+      operations:
+      - method: POST
+        name: describestatemachineforexecution
+        description: AWS Step Functions - Describe State Machine for Execution
+        call: aws-step-functions.describestatemachineforexecution
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.GetActivityTask
+      name: getactivitytask
+      operations:
+      - method: POST
+        name: getactivitytask
+        description: AWS Step Functions - Get Activity Task
+        call: aws-step-functions.getactivitytask
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.GetExecutionHistory
+      name: getexecutionhistory
+      operations:
+      - method: POST
+        name: getexecutionhistory
+        description: AWS Step Functions - Get Execution History
+        call: aws-step-functions.getexecutionhistory
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.ListActivities
+      name: listactivities
+      operations:
+      - method: POST
+        name: listactivities
+        description: AWS Step Functions - List Activities
+        call: aws-step-functions.listactivities
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.ListExecutions
+      name: listexecutions
+      operations:
+      - method: POST
+        name: listexecutions
+        description: AWS Step Functions - List Executions
+        call: aws-step-functions.listexecutions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.ListMapRuns
+      name: listmapruns
+      operations:
+      - method: POST
+        name: listmapruns
+        description: AWS Step Functions - List Map Runs
+        call: aws-step-functions.listmapruns
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.ListStateMachines
+      name: liststatemachines
+      operations:
+      - method: POST
+        name: liststatemachines
+        description: AWS Step Functions - List State Machines
+        call: aws-step-functions.liststatemachines
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.ListTagsForResource
+      name: listtagsforresource
+      operations:
+      - method: POST
+        name: listtagsforresource
+        description: AWS Step Functions - List Tags for Resource
+        call: aws-step-functions.listtagsforresource
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.SendTaskFailure
+      name: sendtaskfailure
+      operations:
+      - method: POST
+        name: sendtaskfailure
+        description: AWS Step Functions - Send Task Failure
+        call: aws-step-functions.sendtaskfailure
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.SendTaskHeartbeat
+      name: sendtaskheartbeat
+      operations:
+      - method: POST
+        name: sendtaskheartbeat
+        description: AWS Step Functions - Send Task Heartbeat
+        call: aws-step-functions.sendtaskheartbeat
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.SendTaskSuccess
+      name: sendtasksuccess
+      operations:
+      - method: POST
+        name: sendtasksuccess
+        description: AWS Step Functions - Send Task Success
+        call: aws-step-functions.sendtasksuccess
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.StartExecution
+      name: startexecution
+      operations:
+      - method: POST
+        name: startexecution
+        description: AWS Step Functions - Start Execution
+        call: aws-step-functions.startexecution
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.StartSyncExecution
+      name: startsyncexecution
+      operations:
+      - method: POST
+        name: startsyncexecution
+        description: AWS Step Functions - Start Sync Execution
+        call: aws-step-functions.startsyncexecution
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.StopExecution
+      name: stopexecution
+      operations:
+      - method: POST
+        name: stopexecution
+        description: AWS Step Functions - Stop Execution
+        call: aws-step-functions.stopexecution
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.TagResource
+      name: tagresource
+      operations:
+      - method: POST
+        name: tagresource
+        description: AWS Step Functions - Tag Resource
+        call: aws-step-functions.tagresource
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.UntagResource
+      name: untagresource
+      operations:
+      - method: POST
+        name: untagresource
+        description: AWS Step Functions - Untag Resource
+        call: aws-step-functions.untagresource
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.UpdateMapRun
+      name: updatemaprun
+      operations:
+      - method: POST
+        name: updatemaprun
+        description: AWS Step Functions - Update Map Run
+        call: aws-step-functions.updatemaprun
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /#X-Amz-Target=AWSStepFunctions.UpdateStateMachine
+      name: updatestatemachine
+      operations:
+      - method: POST
+        name: updatestatemachine
+        description: AWS Step Functions - Update State Machine
+        call: aws-step-functions.updatestatemachine
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: aws-step-functions-mcp
+    transport: http
+    description: MCP adapter for AWS Step Functions for AI agent use.
+    tools:
+    - name: createactivity
+      description: AWS Step Functions - Create Activity
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.createactivity
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createstatemachine
+      description: AWS Step Functions - Create State Machine
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.createstatemachine
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteactivity
+      description: AWS Step Functions - Delete Activity
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.deleteactivity
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletestatemachine
+      description: AWS Step Functions - Delete State Machine
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.deletestatemachine
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describeactivity
+      description: AWS Step Functions - Describe Activity
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.describeactivity
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describeexecution
+      description: AWS Step Functions - Describe Execution
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.describeexecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describemaprun
+      description: AWS Step Functions - Describe Map Run
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.describemaprun
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describestatemachine
+      description: AWS Step Functions - Describe State Machine
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.describestatemachine
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: describestatemachineforexecution
+      description: AWS Step Functions - Describe State Machine for Execution
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.describestatemachineforexecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getactivitytask
+      description: AWS Step Functions - Get Activity Task
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.getactivitytask
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getexecutionhistory
+      description: AWS Step Functions - Get Execution History
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.getexecutionhistory
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      inputParameters:
+      - name: maxResults
+        type: string
+        description: Pagination limit
+      - name: nextToken
+        type: string
+        description: Pagination token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listactivities
+      description: AWS Step Functions - List Activities
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.listactivities
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      inputParameters:
+      - name: maxResults
+        type: string
+        description: Pagination limit
+      - name: nextToken
+        type: string
+        description: Pagination token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listexecutions
+      description: AWS Step Functions - List Executions
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.listexecutions
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      inputParameters:
+      - name: maxResults
+        type: string
+        description: Pagination limit
+      - name: nextToken
+        type: string
+        description: Pagination token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listmapruns
+      description: AWS Step Functions - List Map Runs
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.listmapruns
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      inputParameters:
+      - name: maxResults
+        type: string
+        description: Pagination limit
+      - name: nextToken
+        type: string
+        description: Pagination token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: liststatemachines
+      description: AWS Step Functions - List State Machines
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.liststatemachines
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      inputParameters:
+      - name: maxResults
+        type: string
+        description: Pagination limit
+      - name: nextToken
+        type: string
+        description: Pagination token
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listtagsforresource
+      description: AWS Step Functions - List Tags for Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.listtagsforresource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: sendtaskfailure
+      description: AWS Step Functions - Send Task Failure
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.sendtaskfailure
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: sendtaskheartbeat
+      description: AWS Step Functions - Send Task Heartbeat
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.sendtaskheartbeat
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: sendtasksuccess
+      description: AWS Step Functions - Send Task Success
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.sendtasksuccess
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: startexecution
+      description: AWS Step Functions - Start Execution
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.startexecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: startsyncexecution
+      description: AWS Step Functions - Start Sync Execution
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.startsyncexecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stopexecution
+      description: AWS Step Functions - Stop Execution
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.stopexecution
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: tagresource
+      description: AWS Step Functions - Tag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.tagresource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: untagresource
+      description: AWS Step Functions - Untag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.untagresource
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatemaprun
+      description: AWS Step Functions - Update Map Run
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.updatemaprun
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatestatemachine
+      description: AWS Step Functions - Update State Machine
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: aws-step-functions.updatestatemachine
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    AWS_STEP_FUNCTIONS_TOKEN: AWS_STEP_FUNCTIONS_TOKEN
