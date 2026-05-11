@@ -113,6 +113,18 @@ common:
         description: Orchestrate ML training, processing, and deployment workflows.
       - name: AWS Glue
         description: Trigger and monitor Glue ETL jobs from Step Functions workflows.
+  - type: Integrations
+    url: https://aws.amazon.com/marketplace
+integrations:
+  - name: Sign in
+  - name: Agent Mode
+  - name: 'Why AWS Marketplace?'
+  - name: Get started in AWS Marketplace
+  - name: Industry
+  - name: Resources
+  - name: Become a Channel Partner
+  - name: Sell in AWS Marketplace
+  - name: Manage Your Account
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
