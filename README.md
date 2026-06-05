@@ -1,57 +1,68 @@
-# AWS Step Functions
+# AWS Step Functions (aws-step-functions)
 
 AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and microservices using visual workflows, integrating with AWS services and supporting error handling and retries.
 
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+
+## Tags
+
+- AWS
+- iPaaS
+- Orchestration
+- Serverless
+
+## Timestamps
+
+- **Created:** 2026-03-27
+- **Modified:** 2026-05-19
+
 ## APIs
 
-### AWS Step Functions API
-Orchestration API for managing state machines and executions via Amazon States Language.
-- **Documentation**: https://docs.aws.amazon.com/step-functions/
-- **OpenAPI**: [openapi/aws-step-functions-openapi.json](openapi/aws-step-functions-openapi.json) (26 operations)
-- **API Reference**: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
+### AWS Step Functions
 
-## Artifacts
+AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and microservices using visual workflows, integrating with AWS services and supporting error handling and retries. Define workflows in Amazon States Language with standard and express workflow types.
 
-| Directory | Contents |
-|---|---|
-| [openapi/](openapi/) | 1 OpenAPI specification (26 operations) |
-| [json-schema/](json-schema/) | 173 JSON Schema files |
-| [json-structure/](json-structure/) | 173 JSON Structure files |
-| [json-ld/](json-ld/) | 1 JSON-LD context file |
-| [examples/](examples/) | 173 example files |
-| [rules/](rules/) | Spectral ruleset |
-| [capabilities/](capabilities/) | Naftiko capability definitions |
-| [vocabulary/](vocabulary/) | Domain vocabulary |
+- **Human URL:** [https://aws.amazon.com/step-functions/](https://aws.amazon.com/step-functions/)
+- **Base URL:** `https://states.{region}.amazonaws.com`
 
-## Features
+#### Tags
 
-- **Visual Workflow Design** — Design workflows using the Workflow Studio drag-and-drop interface.
-- **Amazon States Language** — Define workflows in JSON with built-in error handling and retry logic.
-- **AWS Service Integrations** — Natively integrate with over 220 AWS services without custom code.
-- **Standard Workflows** — Long-running workflows with exactly-once task execution semantics.
-- **Express Workflows** — High-volume, short-duration workflows optimized for cost.
-- **Error Handling** — Built-in retry logic and catch blocks for graceful error handling.
-- **Parallel Execution** — Run parallel branches simultaneously within executions.
-- **Map State** — Process arrays of items in parallel using the Map state.
-- **Wait for Callback** — Pause workflows waiting for external events using task tokens.
-- **X-Ray Integration** — End-to-end visibility into workflow executions via AWS X-Ray.
+- iPaaS
+- Orchestration
+- Serverless
 
-## Use Cases
+#### Properties
 
-- **Microservice Orchestration** — Coordinate multiple microservices in reliable, fault-tolerant workflows.
-- **Data Processing Pipelines** — Build ETL pipelines that process data in parallel.
-- **Human Approval Workflows** — Implement approval workflows that wait for human decisions.
-- **Event-Driven Automation** — Automate complex multi-step processes triggered by events.
-- **Machine Learning Pipelines** — Orchestrate ML model training, evaluation, and deployment.
+- [Documentation](https://docs.aws.amazon.com/step-functions/)
+- [Getting Started](https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html)
+- [OpenAPI](openapi/aws-step-functions-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/aws-step-functions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/aws-step-functions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [API Reference](https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html)
 
-## Links
+## Common Properties
 
-- **Website**: https://aws.amazon.com/step-functions/
-- **Getting Started**: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
-- **Pricing**: https://aws.amazon.com/step-functions/pricing/
-- **Blog**: https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/
-- **Status**: https://health.aws.amazon.com/health/status
+- [Website](https://aws.amazon.com/step-functions/)
+- [Documentation](https://docs.aws.amazon.com/step-functions/)
+- [Terms of Service](https://aws.amazon.com/service-terms/)
+- [Privacy Policy](https://aws.amazon.com/privacy/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Pricing](https://aws.amazon.com/step-functions/pricing/)
+- [Blog](https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/)
+- [Changelog](https://aws.amazon.com/releasenotes/aws-step-functions/)
+- [Status Page](https://health.aws.amazon.com/health/status)
+- [Spectral Rules](rules/aws-step-functions-spectral-rules.yml)
+- [Vocabulary](vocabulary/aws-step-functions-vocabulary.yaml)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
+- [Integrations](https://aws.amazon.com/marketplace)
 
 ## Maintainers
 
-- **Kin Lane** — kin@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
