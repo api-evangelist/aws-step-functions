@@ -1,0 +1,1362 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS Step Functions",
+    "version": "2016-11-23"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AWS Step Functions - Create Activity",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.CreateActivity",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Creates an activity. An activity is a task that you write in any programming language and host on any machine that has access to Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity and returns an identifier for use in a state machine and when polling from the activity.</p> <note> <p>This operation is eventually consistent"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Create State Machine",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.CreateStateMachine",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states), determine to which states to transition next (<code>Choice</code> states), stop an execution with an error (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured language. For more information, see <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html\">Amazon States Language</a> in the "
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Delete Activity",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DeleteActivity",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Deletes an activity."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Delete State Machine",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to <code>DELETING</code> and begins the deletion process. </p> <p>If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with ValidationException.</p> <p>A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For example, the qualified state machine ARN <code>arn:partition:states:region:account-id:stateMach"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Describe Activity",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DescribeActivity",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Describes an activity.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not reflect very recent updates and changes.</p> </note>"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Describe Execution",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DescribeExecution",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Provides all information about a state machine execution, such as the state machine associated with the execution, the execution input and output, and relevant execution metadata. Use this API action to return the Map Run ARN if the execution was dispatched by a Map Run.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not reflect very recent updates and changes.</p> </note> <p>This API action is not supported by <code>EXPRESS</code> state machine exe"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Describe Map Run",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DescribeMapRun",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Provides information about a Map Run's configuration, progress, and results. For more information, see <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html\">Examining Map Run</a> in the <i>Step Functions Developer Guide</i>."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Describe State Machine",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DescribeStateMachine",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Provides information about a state machine's definition, its IAM role Amazon Resource Name (ARN), and configuration. If the state machine ARN is a qualified state machine ARN, the response returned includes the <code>Map</code> state's label.</p> <p>A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For example, the qualified state machine ARN <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> ref"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Describe State Machine for Execution",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.DescribeStateMachineForExecution",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Provides information about a state machine's definition, its execution role ARN, and configuration. If an execution was dispatched by a Map Run, the Map Run is returned in the response. Additionally, the state machine returned will be the state machine associated with the Map Run.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not reflect very recent updates and changes.</p> </note> <p>This API action is not supported by <code>EXPRESS</code> state m"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Get Activity Task",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.GetActivityTask",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Used by workers to retrieve a task (with the specified activity ARN) which has been scheduled for execution by a running state machine. This initiates a long poll, where the service holds the HTTP connection open and responds as soon as a task becomes available (i.e. an execution of a task of this type is needed.) The maximum time the service holds on to the request before responding is 60 seconds. If no task is available within 60 seconds, the poll returns a <code>taskToken</code> with a nul"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Get Execution History",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.GetExecutionHistory",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "params": [
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query",
+            "description": "Pagination limit"
+          },
+          {
+            "name": "nextToken",
+            "value": "",
+            "type": "query",
+            "description": "Pagination token"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Returns the history of the specified execution as a list of events. By default, the results are returned in ascending order of the <code>timeStamp</code> of the events. Use the <code>reverseOrder</code> parameter to get the latest events first.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other argum"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - List Activities",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.ListActivities",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "params": [
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query",
+            "description": "Pagination limit"
+          },
+          {
+            "name": "nextToken",
+            "value": "",
+            "type": "query",
+            "description": "Pagination token"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Lists the existing activities.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.</p> <note> <p>This operation is eventually consistent. The results "
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - List Executions",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.ListExecutions",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "params": [
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query",
+            "description": "Pagination limit"
+          },
+          {
+            "name": "nextToken",
+            "value": "",
+            "type": "query",
+            "description": "Pagination token"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.</p> <p>Results are sorted by time, with the most recent execution first.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - List Map Runs",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "params": [
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query",
+            "description": "Pagination limit"
+          },
+          {
+            "name": "nextToken",
+            "value": "",
+            "type": "query",
+            "description": "Pagination token"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Lists all Map Runs that were started by a given state machine execution. Use this API action to obtain Map Run ARNs, and then call <code>DescribeMapRun</code> to obtain more information, if needed."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - List State Machines",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.ListStateMachines",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "params": [
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query",
+            "description": "Pagination limit"
+          },
+          {
+            "name": "nextToken",
+            "value": "",
+            "type": "query",
+            "description": "Pagination token"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Lists the existing state machines.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.</p> <note> <p>This operation is eventually consistent. The resu"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - List Tags for Resource",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>List tags for a given resource.</p> <p>Tags may only contain Unicode letters, digits, white space, or these symbols: <code>_ . : / = + - @</code>.</p>"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Send Task Failure",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.SendTaskFailure",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Used by activity workers and task states using the <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token\">callback</a> pattern to report that the task identified by the <code>taskToken</code> failed."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Send Task Heartbeat",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.SendTaskHeartbeat",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Used by activity workers and task states using the <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token\">callback</a> pattern to report to Step Functions that the task represented by the specified <code>taskToken</code> is still making progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is specified in the state machine's Amazon States Language definition (<code>HeartbeatSeconds</code>). This "
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Send Task Success",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.SendTaskSuccess",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Used by activity workers and task states using the <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token\">callback</a> pattern to report that the task identified by the <code>taskToken</code> completed successfully."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Start Execution",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.StartExecution",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Starts a state machine execution. If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with ValidationException.</p> <p>A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For example, the qualified state machine ARN <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in t"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Start Sync Execution",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.StartSyncExecution",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Starts a Synchronous Express state machine execution. <code>StartSyncExecution</code> is not available for <code>STANDARD</code> workflows.</p> <note> <p> <code>StartSyncExecution</code> will return a <code>200 OK</code> response, even if your execution fails, because the status code in the API response doesn't reflect function errors. Error codes are reserved for errors that prevent your execution from running, such as permissions errors, limit errors, or issues with your state machine code "
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Stop Execution",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.StopExecution",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Stops an execution.</p> <p>This API action is not supported by <code>EXPRESS</code> state machines.</p>"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Tag Resource",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.TagResource",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Add a tag to a Step Functions resource.</p> <p>An array of key-value pairs. For more information, see <a href=\"https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html\">Using Cost Allocation Tags</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>, and <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html\">Controlling Access Using IAM Tags</a>.</p> <p>Tags may only contain Unicode letters, digits, white space, or these"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Untag Resource",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.UntagResource",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Remove a tag from a Step Functions resource"
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Update Map Run",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.UpdateMapRun",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Updates an in-progress Map Run's configuration to include changes to the settings that control maximum concurrency and Map Run failure."
+    },
+    {
+      "info": {
+        "name": "AWS Step Functions - Update State Machine",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://states.{region}.amazonaws.com/#X-Amz-Target=AWSStepFunctions.UpdateStateMachine",
+        "headers": [
+          {
+            "name": "X-Amz-Content-Sha256",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Date",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Algorithm",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Credential",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Security-Token",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Signature",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-SignedHeaders",
+            "value": ""
+          },
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "<p>Updates an existing state machine by modifying its <code>definition</code>, <code>roleArn</code>, or <code>loggingConfiguration</code>. Running executions will continue to use the previous <code>definition</code> and <code>roleArn</code>. You must include at least one of <code>definition</code> or <code>roleArn</code> or you will receive a <code>MissingRequiredParameter</code> error.</p> <p>If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail wi"
+    }
+  ],
+  "bundled": true
+}
