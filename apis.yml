@@ -4,7 +4,7 @@ description: >-
   AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and
   microservices using visual workflows, integrating with AWS services and supporting error handling and retries.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AWS
   - iPaaS
