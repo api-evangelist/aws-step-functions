@@ -37,6 +37,14 @@ apis:
       - type: APIReference
         url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 common:
+  - type: TrustCenter
+    url: security/aws-step-functions-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/aws-step-functions-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/aws-step-functions-domain-security.yml
+  - type: Authentication
+    url: authentication/aws-step-functions-authentication.yml
   - type: Website
     url: https://aws.amazon.com/step-functions/
   - type: Documentation

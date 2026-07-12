@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/aws-step-functions-openapi.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: hmac
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Amazon Signature authorization v4
+  sources:
+  - openapi/aws-step-functions-openapi.json
