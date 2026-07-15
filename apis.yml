@@ -37,6 +37,8 @@ apis:
       - type: APIReference
         url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/aws-step-functions-agentic-access.yml
   - type: TrustCenter
     url: security/aws-step-functions-trust-center.yml
   - type: VulnerabilityDisclosure
