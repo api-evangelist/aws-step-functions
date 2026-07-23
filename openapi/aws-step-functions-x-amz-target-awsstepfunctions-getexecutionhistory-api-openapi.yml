@@ -1,0 +1,1050 @@
+openapi: 3.0.0
+info:
+  version: '2016-11-23'
+  x-release: v4
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.GetExecutionHistory API'
+  description: <fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.</p>
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: states
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/states-2016-11-23.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: https://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: http://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+- url: https://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AWSStepFunctions.GetExecutionHistory'
+paths:
+  /#X-Amz-Target=AWSStepFunctions.GetExecutionHistory:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: GetExecutionHistory
+      description: <p>Returns the history of the specified execution as a list of events. By default, the results are returned in ascending order of the <code>timeStamp</code> of the events. Use the <code>reverseOrder</code> parameter to get the latest events first.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.</p> <p>This API action is not supported by <code>EXPRESS</code> state machines.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetExecutionHistoryOutput'
+        '480':
+          description: ExecutionDoesNotExist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecutionDoesNotExist'
+        '481':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+        '482':
+          description: InvalidToken
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidToken'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetExecutionHistoryInput'
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSStepFunctions.GetExecutionHistory
+      summary: AWS Step Functions - Get Execution History
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=AWSStepFunctions.GetExecutionHistory'
+components:
+  schemas:
+    ActivityTimedOutEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the timeout.
+      description: Contains details about an activity timeout that occurred during an execution.
+    StateExitedEventDetails:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: '<p>The name of the state.</p> <p>A name must <i>not</i> contain:</p> <ul> <li> <p>white space</p> </li> <li> <p>brackets <code>&lt; &gt; { } [ ]</code> </p> </li> <li> <p>wildcard characters <code>? *</code> </p> </li> <li> <p>special characters <code>" # % \ ^ | ~ ` $ &amp; , ; : /</code> </p> </li> <li> <p>control characters (<code>U+0000-001F</code>, <code>U+007F-009F</code>)</p> </li> </ul> <p>To enable logging with CloudWatch Logs, the name should only contain 0-9, A-Z, a-z, - and _.</p>'
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON output data of the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about an exit from a state during an execution.
+    LambdaFunctionScheduleFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a failed Lambda function schedule event that occurred during an execution.
+    ExecutionTimedOutEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the timeout.
+      description: Contains details about the execution timeout that occurred during the execution.
+    LongArn:
+      type: string
+      minLength: 1
+      maxLength: 2000
+    ActivityStartedEventDetails:
+      type: object
+      properties:
+        workerName:
+          allOf:
+          - $ref: '#/components/schemas/Identity'
+          - description: The name of the worker that the task is assigned to. These names are provided by the workers when calling <a>GetActivityTask</a>.
+      description: Contains details about the start of an activity during an execution.
+    LambdaFunctionFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a Lambda function that failed during an execution.
+    StateEnteredEventDetails:
+      type: object
+      required:
+      - name
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the state.
+        input:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The string that contains the JSON input data for the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        inputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the input for an execution history event.
+      description: Contains details about a state entered during an execution.
+    UnsignedInteger:
+      type: integer
+      minimum: 0
+    ExecutionStartedEventDetails:
+      type: object
+      properties:
+        input:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data input to the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        inputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the input for an execution history event.
+        roleArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
+      description: Contains details about the start of the execution.
+    PageSize:
+      type: integer
+      minimum: 0
+      maximum: 1000
+    EventId:
+      type: integer
+    HistoryEventList:
+      type: array
+      description: Contains details about the events that occurred during an execution.
+      items:
+        $ref: '#/components/schemas/HistoryEvent'
+    ExecutionSucceededEventDetails:
+      type: object
+      properties:
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data output by the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about the successful termination of the execution.
+    HistoryEventExecutionDataDetails:
+      type: object
+      properties:
+        truncated:
+          allOf:
+          - $ref: '#/components/schemas/truncated'
+          - description: Indicates whether input or output was truncated in the response. Always <code>false</code> for API calls.
+      description: Provides details about input or output in an execution history event.
+    ExecutionFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about an execution failure event.
+    TaskStartFailedEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a task that failed to start during an execution.
+    ActivityScheduledEventDetails:
+      type: object
+      required:
+      - resource
+      properties:
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the scheduled activity.
+        input:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data input to the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        inputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the input for an execution history event.
+        timeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: The maximum allowed duration of the activity task.
+        heartbeatInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: The maximum allowed duration between two heartbeats for the activity task.
+      description: Contains details about an activity scheduled during an execution.
+    TaskSucceededEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The full JSON response from a resource when a task has succeeded. This response becomes the output of the related task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about the successful completion of a task state.
+    HistoryEvent:
+      type: object
+      required:
+      - timestamp
+      - type
+      - id
+      properties:
+        timestamp:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date and time the event occurred.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventType'
+          - description: The type of the event.
+        id:
+          allOf:
+          - $ref: '#/components/schemas/EventId'
+          - description: The id of the event. Events are numbered sequentially, starting at one.
+        previousEventId:
+          allOf:
+          - $ref: '#/components/schemas/EventId'
+          - description: The id of the previous event.
+        activityFailedEventDetails:
+          $ref: '#/components/schemas/ActivityFailedEventDetails'
+        activityScheduleFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/ActivityScheduleFailedEventDetails'
+          - description: Contains details about an activity schedule event that failed during an execution.
+        activityScheduledEventDetails:
+          $ref: '#/components/schemas/ActivityScheduledEventDetails'
+        activityStartedEventDetails:
+          $ref: '#/components/schemas/ActivityStartedEventDetails'
+        activitySucceededEventDetails:
+          $ref: '#/components/schemas/ActivitySucceededEventDetails'
+        activityTimedOutEventDetails:
+          $ref: '#/components/schemas/ActivityTimedOutEventDetails'
+        taskFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskFailedEventDetails'
+          - description: Contains details about the failure of a task.
+        taskScheduledEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskScheduledEventDetails'
+          - description: Contains details about a task that was scheduled.
+        taskStartFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskStartFailedEventDetails'
+          - description: Contains details about a task that failed to start.
+        taskStartedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskStartedEventDetails'
+          - description: Contains details about a task that was started.
+        taskSubmitFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskSubmitFailedEventDetails'
+          - description: Contains details about a task that where the submit failed.
+        taskSubmittedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskSubmittedEventDetails'
+          - description: Contains details about a submitted task.
+        taskSucceededEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskSucceededEventDetails'
+          - description: Contains details about a task that succeeded.
+        taskTimedOutEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/TaskTimedOutEventDetails'
+          - description: Contains details about a task that timed out.
+        executionFailedEventDetails:
+          $ref: '#/components/schemas/ExecutionFailedEventDetails'
+        executionStartedEventDetails:
+          $ref: '#/components/schemas/ExecutionStartedEventDetails'
+        executionSucceededEventDetails:
+          $ref: '#/components/schemas/ExecutionSucceededEventDetails'
+        executionAbortedEventDetails:
+          $ref: '#/components/schemas/ExecutionAbortedEventDetails'
+        executionTimedOutEventDetails:
+          $ref: '#/components/schemas/ExecutionTimedOutEventDetails'
+        mapStateStartedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapStateStartedEventDetails'
+          - description: Contains details about Map state that was started.
+        mapIterationStartedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapIterationEventDetails'
+          - description: Contains details about an iteration of a Map state that was started.
+        mapIterationSucceededEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapIterationEventDetails'
+          - description: Contains details about an iteration of a Map state that succeeded.
+        mapIterationFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapIterationEventDetails'
+          - description: Contains details about an iteration of a Map state that failed.
+        mapIterationAbortedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapIterationEventDetails'
+          - description: Contains details about an iteration of a Map state that was aborted.
+        lambdaFunctionFailedEventDetails:
+          $ref: '#/components/schemas/LambdaFunctionFailedEventDetails'
+        lambdaFunctionScheduleFailedEventDetails:
+          $ref: '#/components/schemas/LambdaFunctionScheduleFailedEventDetails'
+        lambdaFunctionScheduledEventDetails:
+          $ref: '#/components/schemas/LambdaFunctionScheduledEventDetails'
+        lambdaFunctionStartFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/LambdaFunctionStartFailedEventDetails'
+          - description: Contains details about a lambda function that failed to start during an execution.
+        lambdaFunctionSucceededEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/LambdaFunctionSucceededEventDetails'
+          - description: Contains details about a Lambda function that terminated successfully during an execution.
+        lambdaFunctionTimedOutEventDetails:
+          $ref: '#/components/schemas/LambdaFunctionTimedOutEventDetails'
+        stateEnteredEventDetails:
+          $ref: '#/components/schemas/StateEnteredEventDetails'
+        stateExitedEventDetails:
+          $ref: '#/components/schemas/StateExitedEventDetails'
+        mapRunStartedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapRunStartedEventDetails'
+          - description: Contains details, such as <code>mapRunArn</code>, and the start date and time of a Map Run. <code>mapRunArn</code> is the Amazon Resource Name (ARN) of the Map Run that was started.
+        mapRunFailedEventDetails:
+          allOf:
+          - $ref: '#/components/schemas/MapRunFailedEventDetails'
+          - description: Contains error and cause details about a Map Run that failed.
+      description: Contains details about the events of an execution.
+    LambdaFunctionSucceededEventDetails:
+      type: object
+      properties:
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data output by the Lambda function. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about a Lambda function that successfully terminated during an execution.
+    truncated:
+      type: boolean
+    TaskCredentials:
+      type: object
+      properties:
+        roleArn:
+          allOf:
+          - $ref: '#/components/schemas/LongArn'
+          - description: The ARN of an IAM role that Step Functions assumes for the task. The role can allow cross-account access to resources.
+      description: Contains details about the credentials that Step Functions uses for a task.
+    LambdaFunctionStartFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a lambda function that failed to start during an execution.
+    LambdaFunctionScheduledEventDetails:
+      type: object
+      required:
+      - resource
+      properties:
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the scheduled Lambda function.
+        input:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data input to the Lambda function. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        inputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about input for an execution history event.
+        timeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: The maximum allowed duration of the Lambda function.
+        taskCredentials:
+          allOf:
+          - $ref: '#/components/schemas/TaskCredentials'
+          - description: The credentials that Step Functions uses for the task.
+      description: Contains details about a Lambda function scheduled during an execution.
+    PageToken:
+      type: string
+      minLength: 1
+      maxLength: 1024
+    TaskFailedEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a task failure event.
+    ConnectorParameters:
+      type: string
+      minLength: 0
+      maxLength: 262144
+      format: password
+    MapIterationEventDetails:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the iteration’s parent Map state.
+        index:
+          allOf:
+          - $ref: '#/components/schemas/UnsignedInteger'
+          - description: The index of the array belonging to the Map state iteration.
+      description: Contains details about an iteration of a Map state.
+    ExecutionAbortedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about an abort of an execution.
+    TaskSubmittedEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The response from a resource when a task has started. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about a task submitted to a resource .
+    MapRunStartedEventDetails:
+      type: object
+      properties:
+        mapRunArn:
+          allOf:
+          - $ref: '#/components/schemas/LongArn'
+          - description: The Amazon Resource Name (ARN) of a Map Run that was started.
+      description: Contains details about a Map Run that was started during a state machine execution.
+    ReverseOrder:
+      type: boolean
+    TaskTimedOutEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a resource timeout that occurred during an execution.
+    HistoryEventType:
+      type: string
+      enum:
+      - ActivityFailed
+      - ActivityScheduled
+      - ActivityScheduleFailed
+      - ActivityStarted
+      - ActivitySucceeded
+      - ActivityTimedOut
+      - ChoiceStateEntered
+      - ChoiceStateExited
+      - ExecutionAborted
+      - ExecutionFailed
+      - ExecutionStarted
+      - ExecutionSucceeded
+      - ExecutionTimedOut
+      - FailStateEntered
+      - LambdaFunctionFailed
+      - LambdaFunctionScheduled
+      - LambdaFunctionScheduleFailed
+      - LambdaFunctionStarted
+      - LambdaFunctionStartFailed
+      - LambdaFunctionSucceeded
+      - LambdaFunctionTimedOut
+      - MapIterationAborted
+      - MapIterationFailed
+      - MapIterationStarted
+      - MapIterationSucceeded
+      - MapStateAborted
+      - MapStateEntered
+      - MapStateExited
+      - MapStateFailed
+      - MapStateStarted
+      - MapStateSucceeded
+      - ParallelStateAborted
+      - ParallelStateEntered
+      - ParallelStateExited
+      - ParallelStateFailed
+      - ParallelStateStarted
+      - ParallelStateSucceeded
+      - PassStateEntered
+      - PassStateExited
+      - SucceedStateEntered
+      - SucceedStateExited
+      - TaskFailed
+      - TaskScheduled
+      - TaskStarted
+      - TaskStartFailed
+      - TaskStateAborted
+      - TaskStateEntered
+      - TaskStateExited
+      - TaskSubmitFailed
+      - TaskSubmitted
+      - TaskSucceeded
+      - TaskTimedOut
+      - WaitStateAborted
+      - WaitStateEntered
+      - WaitStateExited
+      - MapRunAborted
+      - MapRunFailed
+      - MapRunStarted
+      - MapRunSucceeded
+    ActivitySucceededEventDetails:
+      type: object
+      properties:
+        output:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveData'
+          - description: The JSON data output by the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        outputDetails:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventExecutionDataDetails'
+          - description: Contains details about the output of an execution history event.
+      description: Contains details about an activity that successfully terminated during an execution.
+    TaskSubmitFailedEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a task that failed to submit during an execution.
+    SensitiveCause:
+      type: string
+      minLength: 0
+      maxLength: 32768
+      format: password
+    GetExecutionHistoryInput:
+      type: object
+      required:
+      - executionArn
+      title: GetExecutionHistoryInput
+      properties:
+        executionArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the execution.
+        maxResults:
+          allOf:
+          - $ref: '#/components/schemas/PageSize'
+          - description: <p>The maximum number of results that are returned per call. You can use <code>nextToken</code> to obtain further pages of results. The default is 100 and the maximum allowed page size is 1000. A value of 0 uses the default.</p> <p>This is only an upper limit. The actual number of results returned per call might be fewer than the specified maximum.</p>
+        reverseOrder:
+          allOf:
+          - $ref: '#/components/schemas/ReverseOrder'
+          - description: Lists events in descending order of their <code>timeStamp</code>.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PageToken'
+          - description: If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.
+        includeExecutionData:
+          allOf:
+          - $ref: '#/components/schemas/IncludeExecutionDataGetExecutionHistory'
+          - description: You can select whether execution data (input or output of a history event) is returned. The default is <code>true</code>.
+    GetExecutionHistoryOutput:
+      type: object
+      required:
+      - events
+      properties:
+        events:
+          allOf:
+          - $ref: '#/components/schemas/HistoryEventList'
+          - description: The list of events that occurred in the execution.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PageToken'
+          - description: If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.
+    SensitiveData:
+      type: string
+      maxLength: 262144
+      format: password
+    IncludeExecutionDataGetExecutionHistory:
+      type: boolean
+    LambdaFunctionTimedOutEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the timeout.
+      description: Contains details about a Lambda function timeout that occurred during an execution.
+    MapStateStartedEventDetails:
+      type: object
+      properties:
+        length:
+          allOf:
+          - $ref: '#/components/schemas/UnsignedInteger'
+          - description: The size of the array for Map state iterations.
+      description: Details about a Map state that was started.
+    MapRunFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the Map Run failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about a Map Run failure event that occurred during a state machine execution.
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    InvalidToken: {}
+    ActivityFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about an activity that failed during an execution.
+    TimeoutInSeconds:
+      type: integer
+    Timestamp:
+      type: string
+      format: date-time
+    Name:
+      type: string
+      minLength: 1
+      maxLength: 80
+    TaskScheduledEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      - region
+      - parameters
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The region of the scheduled task
+        parameters:
+          allOf:
+          - $ref: '#/components/schemas/ConnectorParameters'
+          - description: The JSON data passed to the resource referenced in a task state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
+        timeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: The maximum allowed duration of the task.
+        heartbeatInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/TimeoutInSeconds'
+          - description: The maximum allowed duration between two heartbeats for the task.
+        taskCredentials:
+          allOf:
+          - $ref: '#/components/schemas/TaskCredentials'
+          - description: The credentials that Step Functions uses for the task.
+      description: Contains details about a task scheduled during an execution.
+    Identity:
+      type: string
+      maxLength: 256
+    SensitiveError:
+      type: string
+      minLength: 0
+      maxLength: 256
+      format: password
+    InvalidArn: {}
+    ActivityScheduleFailedEventDetails:
+      type: object
+      properties:
+        error:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveError'
+          - description: The error code of the failure.
+        cause:
+          allOf:
+          - $ref: '#/components/schemas/SensitiveCause'
+          - description: A more detailed explanation of the cause of the failure.
+      description: Contains details about an activity schedule failure that occurred during an execution.
+    ExecutionDoesNotExist: {}
+    TaskStartedEventDetails:
+      type: object
+      required:
+      - resourceType
+      - resource
+      properties:
+        resourceType:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The service name of the resource in a task state.
+        resource:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The action of the resource called by a task state.
+      description: Contains details about the start of a task during an execution.
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/states/
+x-hasEquivalentPaths: true
