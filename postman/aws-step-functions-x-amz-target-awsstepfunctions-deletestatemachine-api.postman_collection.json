@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "1760b3b0-0ec0-456c-9b67-f5f7b0284edd",
+    "name": "AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DeleteStateMachine API",
+    "description": "<fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html\">Step Functions Developer Guide</a> </i>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:53:56.000Z",
+    "updatedAt": "2026-07-28T10:53:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1760b3b0-0ec0-456c-9b67-f5f7b0284edd"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+      "item": [
+        {
+          "name": "AWS Step Functions - Delete State Machine",
+          "id": "411e063a-999b-44cd-9f5d-5bcfd905160d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "AWSStepFunctions.DeleteStateMachine"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stateMachineArn\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=AWSStepFunctions.DeleteStateMachine"
+            },
+            "description": "<p>Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to <code>DELETING</code> and begins the deletion process. </p> <p>If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with ValidationException.</p> <p>A qualified state machine ARN refers to a <i>Distributed Map state</i> defined within a state machine. For example, the qualified state machine ARN <code>arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel</code> refers to a <i>Distributed Map state</i> with a label <code>mapStateLabel</code> in the state machine named <code>stateMachineName</code>.</p> <note> <p>For <code>EXPRESS</code> state machines, the deletion will happen eventually (usually less than a minute). Running executions may emit logs after <code>DeleteStateMachine</code> API is called.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "4344ceb2-22e0-4cf6-b06f-7580dae27b7c",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.DeleteStateMachine"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"stateMachineArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.DeleteStateMachine"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:53:56.000Z",
+              "updatedAt": "2026-07-28T10:53:56.000Z",
+              "uid": "35240-4344ceb2-22e0-4cf6-b06f-7580dae27b7c"
+            },
+            {
+              "id": "8d69aa7b-850d-43a0-b31a-4d533a7863b6",
+              "name": "InvalidArn",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.DeleteStateMachine"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"stateMachineArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.DeleteStateMachine"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:53:56.000Z",
+              "updatedAt": "2026-07-28T10:53:56.000Z",
+              "uid": "35240-8d69aa7b-850d-43a0-b31a-4d533a7863b6"
+            },
+            {
+              "id": "38cb2dcc-b372-488c-8a87-7fc4549939f8",
+              "name": "ValidationException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.DeleteStateMachine"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"stateMachineArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.DeleteStateMachine",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.DeleteStateMachine"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:53:56.000Z",
+              "updatedAt": "2026-07-28T10:53:56.000Z",
+              "uid": "35240-38cb2dcc-b372-488c-8a87-7fc4549939f8"
+            }
+          ],
+          "createdAt": "2026-07-28T10:53:56.000Z",
+          "updatedAt": "2026-07-28T10:53:56.000Z",
+          "uid": "35240-411e063a-999b-44cd-9f5d-5bcfd905160d"
+        }
+      ],
+      "id": "cb0e8dc3-8fed-4fbc-9a79-c76e459eb8d0",
+      "createdAt": "2026-07-28T10:53:56.000Z",
+      "updatedAt": "2026-07-28T10:53:56.000Z",
+      "uid": "35240-cb0e8dc3-8fed-4fbc-9a79-c76e459eb8d0"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://states.{{region}}.amazonaws.com"
+    }
+  ]
+}

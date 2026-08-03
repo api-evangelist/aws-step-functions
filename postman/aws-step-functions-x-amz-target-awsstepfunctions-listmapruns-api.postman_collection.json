@@ -1,0 +1,546 @@
+{
+  "info": {
+    "_postman_id": "c89e9912-8136-4abe-a7c9-cdb4de921f51",
+    "name": "AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListMapRuns API",
+    "description": "<fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html\">Step Functions Developer Guide</a> </i>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:54:25.000Z",
+    "updatedAt": "2026-07-28T10:54:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c89e9912-8136-4abe-a7c9-cdb4de921f51"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+      "item": [
+        {
+          "name": "AWS Step Functions - List Map Runs",
+          "id": "86601da6-2438-4718-bf79-4df14882c78a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "AWSStepFunctions.ListMapRuns"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"executionArn\": \"<string>\",\n  \"maxResults\": \"<integer>\",\n  \"nextToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "X-Amz-Target=AWSStepFunctions.ListMapRuns"
+            },
+            "description": "Lists all Map Runs that were started by a given state machine execution. Use this API action to obtain Map Run ARNs, and then call <code>DescribeMapRun</code> to obtain more information, if needed."
+          },
+          "response": [
+            {
+              "id": "16df5e17-39f0-4409-a8ed-5bc13bd7e542",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListMapRuns"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"executionArn\": \"<string>\",\n  \"maxResults\": \"<integer>\",\n  \"nextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListMapRuns"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"mapRuns\": [\n    {\n      \"executionArn\": \"<string>\",\n      \"mapRunArn\": \"<string>\",\n      \"stateMachineArn\": \"<string>\",\n      \"startDate\": \"<dateTime>\",\n      \"stopDate\": \"<dateTime>\"\n    },\n    {\n      \"executionArn\": \"<string>\",\n      \"mapRunArn\": \"<string>\",\n      \"stateMachineArn\": \"<string>\",\n      \"startDate\": \"<dateTime>\",\n      \"stopDate\": \"<dateTime>\"\n    }\n  ],\n  \"nextToken\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T10:54:25.000Z",
+              "updatedAt": "2026-07-28T10:54:25.000Z",
+              "uid": "35240-16df5e17-39f0-4409-a8ed-5bc13bd7e542"
+            },
+            {
+              "id": "25330d05-393e-43d8-b765-4b0ca03430e9",
+              "name": "ExecutionDoesNotExist",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListMapRuns"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"executionArn\": \"<string>\",\n  \"maxResults\": \"<integer>\",\n  \"nextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListMapRuns"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:54:25.000Z",
+              "updatedAt": "2026-07-28T10:54:25.000Z",
+              "uid": "35240-25330d05-393e-43d8-b765-4b0ca03430e9"
+            },
+            {
+              "id": "a5391278-4e58-4cc1-8846-4c2379a576dc",
+              "name": "InvalidArn",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListMapRuns"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"executionArn\": \"<string>\",\n  \"maxResults\": \"<integer>\",\n  \"nextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListMapRuns"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:54:25.000Z",
+              "updatedAt": "2026-07-28T10:54:25.000Z",
+              "uid": "35240-a5391278-4e58-4cc1-8846-4c2379a576dc"
+            },
+            {
+              "id": "0030d2f2-8a86-443b-9eb3-abcc80545d55",
+              "name": "InvalidToken",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListMapRuns"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"executionArn\": \"<string>\",\n  \"maxResults\": \"<integer>\",\n  \"nextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSStepFunctions.ListMapRuns",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListMapRuns"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:54:25.000Z",
+              "updatedAt": "2026-07-28T10:54:25.000Z",
+              "uid": "35240-0030d2f2-8a86-443b-9eb3-abcc80545d55"
+            }
+          ],
+          "createdAt": "2026-07-28T10:54:25.000Z",
+          "updatedAt": "2026-07-28T10:54:25.000Z",
+          "uid": "35240-86601da6-2438-4718-bf79-4df14882c78a"
+        }
+      ],
+      "id": "24ece672-0831-4866-97e9-c579dba2c42d",
+      "createdAt": "2026-07-28T10:54:25.000Z",
+      "updatedAt": "2026-07-28T10:54:25.000Z",
+      "uid": "35240-24ece672-0831-4866-97e9-c579dba2c42d"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://states.{{region}}.amazonaws.com"
+    }
+  ]
+}

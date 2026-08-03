@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "555f19be-5330-4bc9-bb4b-b40b5468aa5a",
+    "name": "AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListTagsForResource API",
+    "description": "<fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href=\"https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html\">Step Functions Developer Guide</a> </i>.</p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:54:27.000Z",
+    "updatedAt": "2026-07-28T10:54:27.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-555f19be-5330-4bc9-bb4b-b40b5468aa5a"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+      "item": [
+        {
+          "name": "AWS Step Functions - List Tags for Resource",
+          "id": "4f1cab1d-3566-4c1f-8264-dd2d36751ba5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "AWSStepFunctions.ListTagsForResource"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"resourceArn\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=AWSStepFunctions.ListTagsForResource"
+            },
+            "description": "<p>List tags for a given resource.</p> <p>Tags may only contain Unicode letters, digits, white space, or these symbols: <code>_ . : / = + - @</code>.</p>"
+          },
+          "response": [
+            {
+              "id": "abe939bf-5ccf-4f21-8383-94bbd4d6596b",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListTagsForResource"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListTagsForResource"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"tags\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T10:54:27.000Z",
+              "updatedAt": "2026-07-28T10:54:27.000Z",
+              "uid": "35240-abe939bf-5ccf-4f21-8383-94bbd4d6596b"
+            },
+            {
+              "id": "b1e10b4f-69bc-4218-a5b0-1a3322c35f69",
+              "name": "InvalidArn",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListTagsForResource"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListTagsForResource"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:54:27.000Z",
+              "updatedAt": "2026-07-28T10:54:27.000Z",
+              "uid": "35240-b1e10b4f-69bc-4218-a5b0-1a3322c35f69"
+            },
+            {
+              "id": "1a578c39-f7a9-45c4-9777-7205b3e55d4d",
+              "name": "ResourceNotFound",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSStepFunctions.ListTagsForResource"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceArn\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=AWSStepFunctions.ListTagsForResource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=AWSStepFunctions.ListTagsForResource"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:54:27.000Z",
+              "updatedAt": "2026-07-28T10:54:27.000Z",
+              "uid": "35240-1a578c39-f7a9-45c4-9777-7205b3e55d4d"
+            }
+          ],
+          "createdAt": "2026-07-28T10:54:27.000Z",
+          "updatedAt": "2026-07-28T10:54:27.000Z",
+          "uid": "35240-4f1cab1d-3566-4c1f-8264-dd2d36751ba5"
+        }
+      ],
+      "id": "d5f92ee6-7a4f-423a-b2d6-31b4305b05a1",
+      "createdAt": "2026-07-28T10:54:27.000Z",
+      "updatedAt": "2026-07-28T10:54:27.000Z",
+      "uid": "35240-d5f92ee6-7a4f-423a-b2d6-31b4305b05a1"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://states.{{region}}.amazonaws.com"
+    }
+  ]
+}
