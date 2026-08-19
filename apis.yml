@@ -26,7 +26,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml
 created: '2026-03-27'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity API'
