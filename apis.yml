@@ -189,7 +189,8 @@ apis:
     1 operation(s) for #x amz target=awsstepfunctions.describestatemachineforexecution.
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution'
   properties:
   - type: OpenAPI
