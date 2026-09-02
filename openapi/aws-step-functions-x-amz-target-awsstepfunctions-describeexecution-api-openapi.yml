@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeExecution API'
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeExecution #X Amz Target=AWSStepFunctions.DescribeExecution API'
   description: <fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.</p>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -165,59 +165,55 @@ paths:
       tags:
       - '#X Amz Target=AWSStepFunctions.DescribeExecution'
 components:
-  parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
+    ExecutionStatus:
+      type: string
+      enum:
+      - RUNNING
+      - SUCCEEDED
+      - FAILED
+      - TIMED_OUT
+      - ABORTED
+    includedDetails:
+      type: boolean
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    Name:
+      type: string
+      minLength: 1
+      maxLength: 80
+    SensitiveData:
+      type: string
+      maxLength: 262144
+      format: password
+    CloudWatchEventsExecutionDataDetails:
+      type: object
+      properties:
+        included:
+          allOf:
+          - $ref: '#/components/schemas/includedDetails'
+          - description: 'Indicates whether input or output was included in the response. Always <code>true</code> for API calls. '
+      description: Provides details about execution input or output.
+    SensitiveCause:
+      type: string
+      minLength: 0
+      maxLength: 32768
+      format: password
+    Timestamp:
+      type: string
+      format: date-time
+    SensitiveError:
+      type: string
+      minLength: 0
+      maxLength: 256
+      format: password
     TraceHeader:
       type: string
       pattern: \p{ASCII}*
       minLength: 0
       maxLength: 256
-    LongArn:
-      type: string
-      minLength: 1
-      maxLength: 2000
     DescribeExecutionInput:
       type: object
       required:
@@ -228,14 +224,7 @@ components:
           allOf:
           - $ref: '#/components/schemas/Arn'
           - description: The Amazon Resource Name (ARN) of the execution to describe.
-    CloudWatchEventsExecutionDataDetails:
-      type: object
-      properties:
-        included:
-          allOf:
-          - $ref: '#/components/schemas/includedDetails'
-          - description: 'Indicates whether input or output was included in the response. Always <code>true</code> for API calls. '
-      description: Provides details about execution input or output.
+    InvalidArn: {}
     DescribeExecutionOutput:
       type: object
       required:
@@ -296,43 +285,54 @@ components:
           allOf:
           - $ref: '#/components/schemas/SensitiveCause'
           - description: The cause string if the state machine execution failed.
-    SensitiveCause:
-      type: string
-      minLength: 0
-      maxLength: 32768
-      format: password
-    ExecutionStatus:
-      type: string
-      enum:
-      - RUNNING
-      - SUCCEEDED
-      - FAILED
-      - TIMED_OUT
-      - ABORTED
-    SensitiveData:
-      type: string
-      maxLength: 262144
-      format: password
-    includedDetails:
-      type: boolean
-    Arn:
+    LongArn:
       type: string
       minLength: 1
-      maxLength: 256
-    Timestamp:
-      type: string
-      format: date-time
-    Name:
-      type: string
-      minLength: 1
-      maxLength: 80
-    SensitiveError:
-      type: string
-      minLength: 0
-      maxLength: 256
-      format: password
-    InvalidArn: {}
+      maxLength: 2000
     ExecutionDoesNotExist: {}
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
