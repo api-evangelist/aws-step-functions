@@ -1,8 +1,6 @@
 aid: aws-step-functions
 name: AWS Step Functions
-description: >-
-  AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and
-  microservices using visual workflows, integrating with AWS services and supporting error handling and retries.
+description: AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and microservices using visual workflows, integrating with AWS services and supporting error handling and retries.
 type: Index
 deliveryModel:
   model: saas
@@ -32,10 +30,10 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-step-functions.png
 tags:
-  - AWS
-  - iPaaS
-  - Orchestration
-  - Serverless
+- AWS
+- iPaaS
+- Orchestration
+- Serverless
 url: https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml
 created: '2026-03-27'
 modified: '2026-05-19'
@@ -43,9 +41,7 @@ specificationVersion: '0.23'
 apis:
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.CreateActivity API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.createactivity.
+  description: 'The #X Amz Target=AWSStepFunctions.CreateActivity API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.createactivity.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -59,20 +55,16 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStateMachine API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.CreateStateMachine API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.createstatemachine.
+  description: 'The #X Amz Target=AWSStepFunctions.CreateStateMachine API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.createstatemachine.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.CreateStateMachine'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -81,9 +73,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteActivity API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DeleteActivity API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.deleteactivity.
+  description: 'The #X Amz Target=AWSStepFunctions.DeleteActivity API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.deleteactivity.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -97,20 +87,16 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStateMachine API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DeleteStateMachine API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.deletestatemachine.
+  description: 'The #X Amz Target=AWSStepFunctions.DeleteStateMachine API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.deletestatemachine.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.DeleteStateMachine'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -119,37 +105,30 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeActivity API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DescribeActivity API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.describeactivity.
+  description: 'The #X Amz Target=AWSStepFunctions.DescribeActivity API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.describeactivity.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.DescribeActivity'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeExecution API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DescribeExecution API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.describeexecution.
+  description: 'The #X Amz Target=AWSStepFunctions.DescribeExecution API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.describeexecution.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.DescribeExecution'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -158,9 +137,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeMapRun API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DescribeMapRun API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.describemaprun.
+  description: 'The #X Amz Target=AWSStepFunctions.DescribeMapRun API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.describemaprun.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -174,32 +151,25 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeStateMachine API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DescribeStateMachine API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.describestatemachine.
+  description: 'The #X Amz Target=AWSStepFunctions.DescribeStateMachine API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.describestatemachine.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.DescribeStateMachine'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution API from AWS Step Functions —
-    1 operation(s) for #x amz target=awsstepfunctions.describestatemachineforexecution.
+  description: 'The #X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.describestatemachineforexecution.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags: []
@@ -207,8 +177,7 @@ apis:
   - '#X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -217,9 +186,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.GetActivityTask API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.GetActivityTask API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.getactivitytask.
+  description: 'The #X Amz Target=AWSStepFunctions.GetActivityTask API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.getactivitytask.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -233,20 +200,16 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.GetExecutionHistory API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.GetExecutionHistory API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.getexecutionhistory.
+  description: 'The #X Amz Target=AWSStepFunctions.GetExecutionHistory API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.getexecutionhistory.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.GetExecutionHistory'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -255,9 +218,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListActivities API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.ListActivities API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.listactivities.
+  description: 'The #X Amz Target=AWSStepFunctions.ListActivities API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.listactivities.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -273,9 +234,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListExecutions API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.ListExecutions API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.listexecutions.
+  description: 'The #X Amz Target=AWSStepFunctions.ListExecutions API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.listexecutions.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -291,9 +250,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListMapRuns API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.ListMapRuns API from AWS Step Functions — 1 operation(s) for #x
-    amz target=awsstepfunctions.listmapruns.
+  description: 'The #X Amz Target=AWSStepFunctions.ListMapRuns API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.listmapruns.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -307,40 +264,32 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListStateMachines API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.ListStateMachines API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.liststatemachines.
+  description: 'The #X Amz Target=AWSStepFunctions.ListStateMachines API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.liststatemachines.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.ListStateMachines'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListTagsForResource API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.ListTagsForResource API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.listtagsforresource.
+  description: 'The #X Amz Target=AWSStepFunctions.ListTagsForResource API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.listtagsforresource.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.ListTagsForResource'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -349,9 +298,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.SendTaskFailure API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.SendTaskFailure API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.sendtaskfailure.
+  description: 'The #X Amz Target=AWSStepFunctions.SendTaskFailure API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.sendtaskfailure.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -365,20 +312,16 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.SendTaskHeartbeat API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.SendTaskHeartbeat API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.sendtaskheartbeat.
+  description: 'The #X Amz Target=AWSStepFunctions.SendTaskHeartbeat API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.sendtaskheartbeat.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.SendTaskHeartbeat'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -387,9 +330,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.SendTaskSuccess API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.SendTaskSuccess API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.sendtasksuccess.
+  description: 'The #X Amz Target=AWSStepFunctions.SendTaskSuccess API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.sendtasksuccess.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -405,9 +346,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.StartExecution API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.StartExecution API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.startexecution.
+  description: 'The #X Amz Target=AWSStepFunctions.StartExecution API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.startexecution.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -421,20 +360,16 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.StartSyncExecution API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.StartSyncExecution API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.startsyncexecution.
+  description: 'The #X Amz Target=AWSStepFunctions.StartSyncExecution API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.startsyncexecution.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.StartSyncExecution'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
@@ -443,9 +378,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.StopExecution API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.StopExecution API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.stopexecution.
+  description: 'The #X Amz Target=AWSStepFunctions.StopExecution API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.stopexecution.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -461,9 +394,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.TagResource API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.TagResource API from AWS Step Functions — 1 operation(s) for #x
-    amz target=awsstepfunctions.tagresource.
+  description: 'The #X Amz Target=AWSStepFunctions.TagResource API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.tagresource.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -479,9 +410,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.UntagResource API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.UntagResource API from AWS Step Functions — 1 operation(s) for
-    #x amz target=awsstepfunctions.untagresource.
+  description: 'The #X Amz Target=AWSStepFunctions.UntagResource API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.untagresource.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -497,9 +426,7 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
 - aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateMapRun API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.UpdateMapRun API from AWS Step Functions — 1 operation(s) for #x
-    amz target=awsstepfunctions.updatemaprun.
+  description: 'The #X Amz Target=AWSStepFunctions.UpdateMapRun API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.updatemaprun.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
@@ -513,126 +440,140 @@ apis:
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-- aid: >-
-    aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api
+- aid: aws-step-functions:aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api
   name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateStateMachine API'
-  description: >-
-    The #X Amz Target=AWSStepFunctions.UpdateStateMachine API from AWS Step Functions — 1 operation(s)
-    for #x amz target=awsstepfunctions.updatestatemachine.
+  description: 'The #X Amz Target=AWSStepFunctions.UpdateStateMachine API from AWS Step Functions — 1 operation(s) for #x amz target=awsstepfunctions.updatestatemachine.'
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
   tags:
   - '#X Amz Target=AWSStepFunctions.UpdateStateMachine'
   properties:
   - type: OpenAPI
-    url: >-
-      openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api-openapi.yml
+    url: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
   - type: GettingStarted
     url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: APIReference
     url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
-common:
-  - type: CapabilityMap
-    url: capabilities/aws-step-functions-capability-edges.yml
-    name: AWS Step Functions Business Capability Map
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/aws-step-functions/overview
-  - type: AgenticAccess
-    url: agentic-access/aws-step-functions-agentic-access.yml
-  - type: TrustCenter
-    url: security/aws-step-functions-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/aws-step-functions-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/aws-step-functions-domain-security.yml
-  - type: Authentication
-    url: authentication/aws-step-functions-authentication.yml
-  - type: Website
-    url: https://aws.amazon.com/step-functions/
+- aid: aws-step-functions:step-functions-state-machines-api
+  name: AWS Step Functions State Machines API
+  description: Create, describe, update, delete, and list state machines
+  humanURL: https://aws.amazon.com/step-functions/
+  baseURL: https://states.{region}.amazonaws.com
+  tags:
+  - State Machines
+  properties:
+  - type: OpenAPI
+    url: openapi/step-functions-state-machines-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/step-functions/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
+  - type: Reference
+    url: https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html
   - type: Pricing
     url: https://aws.amazon.com/step-functions/pricing/
-  - type: Blog
-    url: https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/
-  - type: ChangeLog
-    url: https://aws.amazon.com/releasenotes/aws-step-functions/
-  - type: StatusPage
-    url: https://health.aws.amazon.com/health/status
-  - type: SpectralRules
-    url: rules/aws-step-functions-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/aws-step-functions-vocabulary.yaml
-  - type: Features
-    data:
-      - name: Visual Workflow Design
-        description: Design and visualize workflows using the Workflow Studio drag-and-drop interface.
-      - name: Amazon States Language
-        description: Define workflows in a JSON-based structured language with built-in error handling and retry logic.
-      - name: AWS Service Integrations
-        description: Natively integrate with over 220 AWS services without writing custom code.
-      - name: Standard Workflows
-        description: Long-running, durable workflows with exactly-once task execution semantics.
-      - name: Express Workflows
-        description: High-volume, short-duration workflows optimized for cost with at-least-once execution.
-      - name: Error Handling
-        description: Built-in retry logic and catch blocks for graceful error handling and fallback paths.
-      - name: Parallel Execution
-        description: Run parallel branches simultaneously within the same state machine execution.
-      - name: Map State
-        description: Process arrays of items in parallel using the Map state for dynamic fan-out.
-      - name: Wait for Callback
-        description: Pause workflows waiting for external events using task tokens.
-      - name: X-Ray Integration
-        description: Built-in tracing via AWS X-Ray for end-to-end visibility into workflow executions.
-  - type: UseCases
-    data:
-      - name: Microservice Orchestration
-        description: Coordinate multiple microservices in a reliable, fault-tolerant workflow.
-      - name: Data Processing Pipelines
-        description: Build ETL pipelines that process data in parallel across multiple services.
-      - name: Human Approval Workflows
-        description: Implement approval workflows that wait for human decisions via task tokens.
-      - name: Event-Driven Automation
-        description: Automate complex multi-step processes triggered by events.
-      - name: Machine Learning Pipelines
-        description: Orchestrate ML model training, evaluation, and deployment using SageMaker integrations.
-  - type: Integrations
-    data:
-      - name: AWS Lambda
-        description: Invoke Lambda functions as Task states in workflows.
-      - name: Amazon SQS
-        description: Send and receive messages from SQS queues as part of workflows.
-      - name: Amazon DynamoDB
-        description: Read and write DynamoDB records directly from workflow states.
-      - name: Amazon ECS
-        description: Run ECS tasks and Fargate containers as workflow steps.
-      - name: Amazon SageMaker
-        description: Orchestrate ML training, processing, and deployment workflows.
-      - name: AWS Glue
-        description: Trigger and monitor Glue ETL jobs from Step Functions workflows.
-  - type: Integrations
-    url: https://aws.amazon.com/marketplace
+common:
+- type: CapabilityMap
+  url: capabilities/aws-step-functions-capability-edges.yml
+  name: AWS Step Functions Business Capability Map
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/aws-step-functions/overview
+- type: AgenticAccess
+  url: agentic-access/aws-step-functions-agentic-access.yml
+- type: TrustCenter
+  url: security/aws-step-functions-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/aws-step-functions-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aws-step-functions-domain-security.yml
+- type: Authentication
+  url: authentication/aws-step-functions-authentication.yml
+- type: Website
+  url: https://aws.amazon.com/step-functions/
+- type: Documentation
+  url: https://docs.aws.amazon.com/step-functions/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Pricing
+  url: https://aws.amazon.com/step-functions/pricing/
+- type: Blog
+  url: https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/
+- type: ChangeLog
+  url: https://aws.amazon.com/releasenotes/aws-step-functions/
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: SpectralRules
+  url: rules/aws-step-functions-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/aws-step-functions-vocabulary.yaml
+- type: Features
+  data:
+  - name: Visual Workflow Design
+    description: Design and visualize workflows using the Workflow Studio drag-and-drop interface.
+  - name: Amazon States Language
+    description: Define workflows in a JSON-based structured language with built-in error handling and retry logic.
+  - name: AWS Service Integrations
+    description: Natively integrate with over 220 AWS services without writing custom code.
+  - name: Standard Workflows
+    description: Long-running, durable workflows with exactly-once task execution semantics.
+  - name: Express Workflows
+    description: High-volume, short-duration workflows optimized for cost with at-least-once execution.
+  - name: Error Handling
+    description: Built-in retry logic and catch blocks for graceful error handling and fallback paths.
+  - name: Parallel Execution
+    description: Run parallel branches simultaneously within the same state machine execution.
+  - name: Map State
+    description: Process arrays of items in parallel using the Map state for dynamic fan-out.
+  - name: Wait for Callback
+    description: Pause workflows waiting for external events using task tokens.
+  - name: X-Ray Integration
+    description: Built-in tracing via AWS X-Ray for end-to-end visibility into workflow executions.
+- type: UseCases
+  data:
+  - name: Microservice Orchestration
+    description: Coordinate multiple microservices in a reliable, fault-tolerant workflow.
+  - name: Data Processing Pipelines
+    description: Build ETL pipelines that process data in parallel across multiple services.
+  - name: Human Approval Workflows
+    description: Implement approval workflows that wait for human decisions via task tokens.
+  - name: Event-Driven Automation
+    description: Automate complex multi-step processes triggered by events.
+  - name: Machine Learning Pipelines
+    description: Orchestrate ML model training, evaluation, and deployment using SageMaker integrations.
+- type: Integrations
+  data:
+  - name: AWS Lambda
+    description: Invoke Lambda functions as Task states in workflows.
+  - name: Amazon SQS
+    description: Send and receive messages from SQS queues as part of workflows.
+  - name: Amazon DynamoDB
+    description: Read and write DynamoDB records directly from workflow states.
+  - name: Amazon ECS
+    description: Run ECS tasks and Fargate containers as workflow steps.
+  - name: Amazon SageMaker
+    description: Orchestrate ML training, processing, and deployment workflows.
+  - name: AWS Glue
+    description: Trigger and monitor Glue ETL jobs from Step Functions workflows.
+- type: Integrations
+  url: https://aws.amazon.com/marketplace
 integrations:
-  - name: Sign in
-  - name: Agent Mode
-  - name: Why AWS Marketplace?
-  - name: Get started in AWS Marketplace
-  - name: Industry
-  - name: Resources
-  - name: Become a Channel Partner
-  - name: Sell in AWS Marketplace
-  - name: Manage Your Account
+- name: Sign in
+- name: Agent Mode
+- name: Why AWS Marketplace?
+- name: Get started in AWS Marketplace
+- name: Industry
+- name: Resources
+- name: Become a Channel Partner
+- name: Sell in AWS Marketplace
+- name: Manage Your Account
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: aws
 x-relationship: product
