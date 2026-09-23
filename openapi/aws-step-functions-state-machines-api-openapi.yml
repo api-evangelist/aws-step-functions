@@ -1,0 +1,213 @@
+openapi: 3.2.0
+info:
+  title: AWS Step Functions State Machines API
+  description: AWS Step Functions API for creating and managing state machines, executing workflows, and coordinating distributed applications using the Amazon States Language. Supports Standard and Express state machine types with versioning, aliases, and activity workers.
+  version: '2016-11-23'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/support/
+  license:
+    name: Amazon Software License
+    url: https://aws.amazon.com/asl/
+servers:
+- url: https://states.{region}.amazonaws.com
+  description: AWS Step Functions regional endpoint
+  variables:
+    region:
+      description: AWS region identifier
+      default: us-east-1
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - eu-west-1
+      - eu-central-1
+      - ap-northeast-1
+      - ap-southeast-1
+      - ap-southeast-2
+security:
+- awsSigV4: []
+tags:
+- name: State Machines
+  description: Create, describe, update, delete, and list state machines
+paths:
+  /:
+    post:
+      operationId: createStateMachine
+      summary: Create State Machine
+      description: Creates a state machine. A state machine consists of a collection of states that can do work (Task states), determine transitions (Choice states), stop with an error (Fail states), and more. Optionally publish version 1 on creation by setting publish to true.
+      tags:
+      - State Machines
+      parameters:
+      - $ref: '#/components/parameters/XAmzTarget-CreateStateMachine'
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.0:
+            schema:
+              $ref: '#/components/schemas/CreateStateMachineRequest'
+      responses:
+        '200':
+          description: State machine created successfully
+          content:
+            application/x-amz-json-1.0:
+              schema:
+                $ref: '#/components/schemas/CreateStateMachineResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
+components:
+  responses:
+    Conflict:
+      description: Resource conflict
+      content:
+        application/x-amz-json-1.0:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadRequest:
+      description: Invalid request parameters
+      content:
+        application/x-amz-json-1.0:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    CreateStateMachineRequest:
+      type: object
+      required:
+      - name
+      - definition
+      - roleArn
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+          description: State machine name (no spaces, brackets, or special characters)
+        definition:
+          type: string
+          minLength: 1
+          maxLength: 1048576
+          description: Amazon States Language JSON definition of the state machine
+        roleArn:
+          type: string
+          minLength: 1
+          maxLength: 256
+          description: IAM role ARN granting Step Functions permissions
+        type:
+          type: string
+          enum:
+          - STANDARD
+          - EXPRESS
+          default: STANDARD
+          description: State machine type
+        loggingConfiguration:
+          $ref: '#/components/schemas/LoggingConfiguration'
+        tracingConfiguration:
+          $ref: '#/components/schemas/TracingConfiguration'
+        encryptionConfiguration:
+          $ref: '#/components/schemas/EncryptionConfiguration'
+        publish:
+          type: boolean
+          default: false
+          description: Whether to publish version 1 on creation
+        versionDescription:
+          type: string
+          maxLength: 256
+          description: Description for the initial version (requires publish=true)
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    EncryptionConfiguration:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - AWS_OWNED_KEY
+          - CUSTOMER_MANAGED_KMS_KEY
+        kmsKeyId:
+          type: string
+        kmsDataKeyReusePeriodSeconds:
+          type: integer
+          minimum: 60
+          maximum: 900
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+        code:
+          type: string
+    LoggingConfiguration:
+      type: object
+      properties:
+        level:
+          type: string
+          enum:
+          - ALL
+          - ERROR
+          - FATAL
+          - false
+          default: false
+        includeExecutionData:
+          type: boolean
+        destinations:
+          type: array
+          items:
+            type: object
+            properties:
+              cloudWatchLogsLogGroup:
+                type: object
+                properties:
+                  logGroupArn:
+                    type: string
+    Tag:
+      type: object
+      required:
+      - key
+      - value
+      properties:
+        key:
+          type: string
+          description: Tag key
+        value:
+          type: string
+          description: Tag value
+    TracingConfiguration:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          default: false
+    CreateStateMachineResponse:
+      type: object
+      properties:
+        stateMachineArn:
+          type: string
+          description: ARN identifying the created state machine
+        creationDate:
+          type: number
+          description: Unix timestamp of creation
+        stateMachineVersionArn:
+          type: string
+          description: ARN of version 1 if publish was true
+  parameters:
+    XAmzTarget-CreateStateMachine:
+      name: X-Amz-Target
+      in: header
+      required: true
+      schema:
+        type: string
+        enum:
+        - AmazonStates.CreateStateMachine
+  securitySchemes:
+    awsSigV4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: AWS Signature Version 4. The authorization header includes the credential, signed headers, and signature. Use AWS SDK for automatic signing.
+x-amazon-apigateway-endpoint-configuration:
+  disableExecuteApiEndpoint: false

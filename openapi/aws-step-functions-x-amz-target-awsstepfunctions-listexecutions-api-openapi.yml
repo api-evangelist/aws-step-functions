@@ -1,9 +1,11 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2016-11-23'
   x-release: v4
-  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListExecutions #X Amz Target=AWSStepFunctions.ListExecutions API'
-  description: <fullname>Step Functions</fullname> <p>Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.</p> <p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or <i>task</i>, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any issues.</p> <p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.</p>
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListExecut…'
+  description: 'Step Functions
+
+    Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.'
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +25,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/states-2016-11-23.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +127,19 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: ListExecutions
-      description: <p>Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.</p> <p>Results are sorted by time, with the most recent execution first.</p> <p>If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not reflect very recent updates and changes.</p> </note> <p>This API action is not supported by <code>EXPRESS</code> state machines.</p>
+      description: 'Lists all executions of a state machine or a Map Run. You can list all executions related to a state machine by specifying a state machine Amazon Resource Name (ARN), or those related to a Map Run by specifying a Map Run ARN.
+
+
+        Results are sorted by time, with the most recent execution first.
+
+
+        If nextToken is returned, there are more results available. The value of nextToken is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+
+
+        This operation is eventually consistent. The results are best effort and may not reflect very recent updates and changes.
+
+
+        This API action is not supported by EXPRESS state machines.'
       responses:
         '200':
           description: Success
@@ -201,7 +216,51 @@ paths:
       tags:
       - '#X Amz Target=AWSStepFunctions.ListExecutions'
 components:
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    ResourceNotFound: {}
     ExecutionStatus:
       type: string
       enum:
@@ -210,6 +269,31 @@ components:
       - FAILED
       - TIMED_OUT
       - ABORTED
+    StateMachineDoesNotExist: {}
+    UnsignedInteger:
+      type: integer
+      minimum: 0
+    Name:
+      type: string
+      minLength: 1
+      maxLength: 80
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    ListExecutionsOutput:
+      type: object
+      required:
+      - executions
+      properties:
+        executions:
+          allOf:
+          - $ref: '#/components/schemas/ExecutionList'
+          - description: The list of matching executions.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/ListExecutionsPageToken'
+          - description: If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.
     ExecutionListItem:
       type: object
       required:
@@ -252,26 +336,10 @@ components:
           - $ref: '#/components/schemas/UnsignedInteger'
           - description: The total number of items processed in a child workflow execution. This field is returned only if <code>mapRunArn</code> was specified in the <code>ListExecutions</code> API action. If <code>stateMachineArn</code> was specified in <code>ListExecutions</code>, the <code>itemCount</code> field isn't returned.
       description: Contains details about an execution.
-    ExecutionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ExecutionListItem'
-    StateMachineDoesNotExist: {}
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
-    Name:
-      type: string
-      minLength: 1
-      maxLength: 80
-    ValidationException: {}
-    UnsignedInteger:
+    PageSize:
       type: integer
       minimum: 0
-    Timestamp:
-      type: string
-      format: date-time
+      maximum: 1000
     ListExecutionsInput:
       type: object
       title: ListExecutionsInput
@@ -296,78 +364,25 @@ components:
           allOf:
           - $ref: '#/components/schemas/LongArn'
           - description: <p>The Amazon Resource Name (ARN) of the Map Run that started the child workflow executions. If the <code>mapRunArn</code> field is specified, a list of all of the child workflow executions started by a Map Run is returned. For more information, see <a href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-examine-map-run.html">Examining Map Run</a> in the <i>Step Functions Developer Guide</i>.</p> <p>You can specify either a <code>mapRunArn</code> or a <code>stateMachineArn</code>, but not both.</p>
-    InvalidToken: {}
-    StateMachineTypeNotSupported: {}
-    InvalidArn: {}
-    ListExecutionsOutput:
-      type: object
-      required:
-      - executions
-      properties:
-        executions:
-          allOf:
-          - $ref: '#/components/schemas/ExecutionList'
-          - description: The list of matching executions.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/ListExecutionsPageToken'
-          - description: If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an <i>HTTP 400 InvalidToken</i> error.
     ListExecutionsPageToken:
       type: string
       minLength: 1
       maxLength: 3096
+    Timestamp:
+      type: string
+      format: date-time
+    InvalidArn: {}
+    ValidationException: {}
+    InvalidToken: {}
     LongArn:
       type: string
       minLength: 1
       maxLength: 2000
-    ResourceNotFound: {}
-    PageSize:
-      type: integer
-      minimum: 0
-      maximum: 1000
-  parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
+    StateMachineTypeNotSupported: {}
+    ExecutionList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ExecutionListItem'
   securitySchemes:
     hmac:
       type: apiKey
