@@ -1,0 +1,415 @@
+# x-archived-from: amazon-step-functions-x-amz-target-awsstepfunctions-createstatemachinealias-api-openapi.yml
+# x-archived-on: 2026-09-26
+openapi: 3.2.0
+info:
+  version: '2016-11-23'
+  x-release: v4
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat…'
+  description: 'Step Functions
+
+    Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.'
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: states
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/states-2016-11-23.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: https://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: http://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+- url: https://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AWSStepFunctions.CreateStateMachineAlias'
+paths:
+  /#X-Amz-Target=AWSStepFunctions.CreateStateMachineAlias:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: CreateStateMachineAlias
+      description: 'Creates an alias for a state machine that points to one or two versions of the same state machine. You can set your application to call StartExecution with an alias and update the version the alias uses without changing the client''s code.
+
+
+        You can also map an alias to split StartExecution requests between two versions of a state machine. To do this, add a second RoutingConfig object in the routingConfiguration parameter. You must also specify the percentage of execution run requests each version should receive in both RoutingConfig objects. Step Functions randomly chooses which version runs a given execution based on the percentage you specify.
+
+
+        To create an alias that points to a single version, specify a single RoutingConfig object with a weight set to 100.
+
+
+        You can create up to 100 aliases for each state machine. You must delete unused aliases using the DeleteStateMachineAlias API action.
+
+
+        CreateStateMachineAlias is an idempotent API. Step Functions bases the idempotency check on the stateMachineArn, description, name, and routingConfiguration parameters. Requests that contain the same values for these parameters return a successful idempotent response without creating a duplicate resource.
+
+
+        Related operations:
+
+
+        DescribeStateMachineAlias
+
+
+        ListStateMachineAliases
+
+
+        UpdateStateMachineAlias
+
+
+        DeleteStateMachineAlias'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateStateMachineAliasOutput'
+              examples:
+                CreateStateMachineAlias200Example:
+                  summary: Default CreateStateMachineAlias 200
+                  x-microcks-default: true
+                  value:
+                    stateMachineAliasArn: arn:aws:service:us-east-1:123456789012:resource/example
+                    creationDate: example-value
+        '480':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                CreateStateMachineAlias480Example:
+                  summary: Default CreateStateMachineAlias 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidName
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidName'
+              examples:
+                CreateStateMachineAlias481Example:
+                  summary: Default CreateStateMachineAlias 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                CreateStateMachineAlias482Example:
+                  summary: Default CreateStateMachineAlias 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: StateMachineDeleting
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StateMachineDeleting'
+              examples:
+                CreateStateMachineAlias483Example:
+                  summary: Default CreateStateMachineAlias 483
+                  x-microcks-default: true
+                  value: example-value
+        '484':
+          description: ResourceNotFound
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFound'
+              examples:
+                CreateStateMachineAlias484Example:
+                  summary: Default CreateStateMachineAlias 484
+                  x-microcks-default: true
+                  value: example-value
+        '485':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                CreateStateMachineAlias485Example:
+                  summary: Default CreateStateMachineAlias 485
+                  x-microcks-default: true
+                  value: example-value
+        '486':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+              examples:
+                CreateStateMachineAlias486Example:
+                  summary: Default CreateStateMachineAlias 486
+                  x-microcks-default: true
+                  value: example-value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateStateMachineAliasInput'
+            examples:
+              CreateStateMachineAliasRequestExample:
+                summary: Default CreateStateMachineAlias request
+                x-microcks-default: true
+                value:
+                  description: example-value
+                  name: MyResource
+                  routingConfiguration: example-value
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSStepFunctions.CreateStateMachineAlias
+      summary: Amazon Create State Machine Alias
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=AWSStepFunctions.CreateStateMachineAlias'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ValidationException: {}
+    RoutingConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RoutingConfigurationListItem'
+      minItems: 1
+      maxItems: 2
+    ResourceNotFound: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    ConflictException: {}
+    InvalidName: {}
+    InvalidArn: {}
+    VersionWeight:
+      type: integer
+      minimum: 0
+      maximum: 100
+    RoutingConfigurationListItem:
+      type: object
+      required:
+      - stateMachineVersionArn
+      - weight
+      properties:
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: <p>The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in the routing configuration.</p> <p>If you specify the ARN of a second version, it must belong to the same state machine as the first version.</p>
+        weight:
+          allOf:
+          - $ref: '#/components/schemas/VersionWeight'
+          - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
+      description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
+    Timestamp:
+      type: string
+      format: date-time
+    CharacterRestrictedName:
+      type: string
+      pattern: ^(?=.*[a-zA-Z_\-\.])[a-zA-Z0-9_\-\.]+$
+      minLength: 1
+      maxLength: 80
+    ServiceQuotaExceededException: {}
+    CreateStateMachineAliasInput:
+      type: object
+      required:
+      - name
+      - routingConfiguration
+      title: CreateStateMachineAliasInput
+      properties:
+        description:
+          allOf:
+          - $ref: '#/components/schemas/AliasDescription'
+          - description: A description for the state machine alias.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/CharacterRestrictedName'
+          - description: <p>The name of the state machine alias.</p> <p>To avoid conflict with version ARNs, don't use an integer in the name of the alias.</p>
+        routingConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/RoutingConfigurationList'
+          - description: The routing configuration of a state machine alias. The routing configuration shifts execution traffic between two state machine versions. <code>routingConfiguration</code> contains an array of <code>RoutingConfig</code> objects that specify up to two state machine versions. Step Functions then randomly choses which version to run an execution with based on the weight assigned to each <code>RoutingConfig</code>.
+    StateMachineDeleting: {}
+    CreateStateMachineAliasOutput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      - creationDate
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) that identifies the created state machine alias.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date the state machine alias was created.
+    AliasDescription:
+      type: string
+      maxLength: 256
+      format: password
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/states/
+x-hasEquivalentPaths: true

@@ -1,0 +1,581 @@
+openapi: 3.2.0
+info:
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
+  version: '2016-11-23'
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/states-2016-11-23.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-preferred: true
+  x-providerName: amazonaws.com
+  x-release: v4
+  x-serviceName: states
+  description: 'Operations tagged AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat… across 2 of this provider''s published API definitions: amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachinealias-api-openapi.yml, amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachineversion-api-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: http://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: https://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: http://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+- url: https://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
+paths:
+  /#X-Amz-Target=AWSStepFunctions.DeleteStateMachineAlias:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DeleteStateMachineAlias
+      description: 'Deletes a state machine alias.
+
+
+        After you delete a state machine alias, you can''t use it to start executions. When you delete a state machine alias, Step Functions doesn''t delete the state machine versions that alias references.
+
+
+        Related operations:
+
+
+        CreateStateMachineAlias
+
+
+        DescribeStateMachineAlias
+
+
+        ListStateMachineAliases
+
+
+        UpdateStateMachineAlias'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteStateMachineAliasOutput'
+              examples:
+                DeleteStateMachineAlias200Example:
+                  summary: Default DeleteStateMachineAlias 200
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DeleteStateMachineAlias480Example:
+                  summary: Default DeleteStateMachineAlias 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                DeleteStateMachineAlias481Example:
+                  summary: Default DeleteStateMachineAlias 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: ResourceNotFound
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFound'
+              examples:
+                DeleteStateMachineAlias482Example:
+                  summary: Default DeleteStateMachineAlias 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteStateMachineAlias483Example:
+                  summary: Default DeleteStateMachineAlias 483
+                  x-microcks-default: true
+                  value: example-value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteStateMachineAliasInput'
+            examples:
+              DeleteStateMachineAliasRequestExample:
+                summary: Default DeleteStateMachineAlias request
+                x-microcks-default: true
+                value:
+                  stateMachineAliasArn: arn:aws:service:us-east-1:123456789012:resource/example
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSStepFunctions.DeleteStateMachineAlias
+      summary: Amazon Delete State Machine Alias
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
+    servers:
+    - url: http://states.{region}.amazonaws.com
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - eu-south-1
+          - af-south-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-east-1
+          - ap-south-1
+          - sa-east-1
+          - me-south-1
+          default: us-east-1
+      description: The AWS SFN multi-region endpoint
+    - url: https://states.{region}.amazonaws.com
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - eu-south-1
+          - af-south-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-east-1
+          - ap-south-1
+          - sa-east-1
+          - me-south-1
+          default: us-east-1
+      description: The AWS SFN multi-region endpoint
+    - url: http://states.{region}.amazonaws.com.cn
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - cn-north-1
+          - cn-northwest-1
+          default: cn-north-1
+      description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+    - url: https://states.{region}.amazonaws.com.cn
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - cn-north-1
+          - cn-northwest-1
+          default: cn-north-1
+      description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+  /#X-Amz-Target=AWSStepFunctions.DeleteStateMachineVersion:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DeleteStateMachineVersion
+      description: 'Deletes a state machine version. After you delete a version, you can''t call StartExecution using that version''s ARN or use the version with a state machine alias.
+
+
+        Deleting a state machine version won''t terminate its in-progress executions.
+
+
+        You can''t delete a state machine version currently referenced by one or more aliases. Before you delete a version, you must either delete the aliases or update them to point to another state machine version.
+
+
+        Related operations:
+
+
+        PublishStateMachineVersion
+
+
+        ListStateMachineVersions'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteStateMachineVersionOutput'
+              examples:
+                DeleteStateMachineVersion200Example:
+                  summary: Default DeleteStateMachineVersion 200
+                  x-microcks-default: true
+                  value: {}
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DeleteStateMachineVersion480Example:
+                  summary: Default DeleteStateMachineVersion 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                DeleteStateMachineVersion481Example:
+                  summary: Default DeleteStateMachineVersion 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteStateMachineVersion482Example:
+                  summary: Default DeleteStateMachineVersion 482
+                  x-microcks-default: true
+                  value: example-value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteStateMachineVersionInput'
+            examples:
+              DeleteStateMachineVersionRequestExample:
+                summary: Default DeleteStateMachineVersion request
+                x-microcks-default: true
+                value:
+                  stateMachineVersionArn: arn:aws:service:us-east-1:123456789012:resource/example
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSStepFunctions.DeleteStateMachineVersion
+      summary: Amazon Delete State Machine Version
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
+    servers:
+    - url: http://states.{region}.amazonaws.com
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - eu-south-1
+          - af-south-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-east-1
+          - ap-south-1
+          - sa-east-1
+          - me-south-1
+          default: us-east-1
+      description: The AWS SFN multi-region endpoint
+    - url: https://states.{region}.amazonaws.com
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - eu-south-1
+          - af-south-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-east-1
+          - ap-south-1
+          - sa-east-1
+          - me-south-1
+          default: us-east-1
+      description: The AWS SFN multi-region endpoint
+    - url: http://states.{region}.amazonaws.com.cn
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - cn-north-1
+          - cn-northwest-1
+          default: cn-north-1
+      description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+    - url: https://states.{region}.amazonaws.com.cn
+      variables:
+        region:
+          description: The AWS region
+          enum:
+          - cn-north-1
+          - cn-northwest-1
+          default: cn-north-1
+      description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+components:
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ValidationException: {}
+    DeleteStateMachineAliasOutput:
+      type: object
+      properties: {}
+    ResourceNotFound: {}
+    DeleteStateMachineAliasInput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      title: DeleteStateMachineAliasInput
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias to delete.
+    InvalidArn: {}
+    ConflictException: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    DeleteStateMachineVersionInput:
+      type: object
+      required:
+      - stateMachineVersionArn
+      title: DeleteStateMachineVersionInput
+      properties:
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/LongArn'
+          - description: The Amazon Resource Name (ARN) of the state machine version to delete.
+    DeleteStateMachineVersionOutput:
+      type: object
+      properties: {}
+    LongArn:
+      type: string
+      minLength: 1
+      maxLength: 2000
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/states/
+x-refined-from:
+- amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachinealias-api-openapi.yml
+- amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachineversion-api-openapi.yml
+x-hasEquivalentPaths: true

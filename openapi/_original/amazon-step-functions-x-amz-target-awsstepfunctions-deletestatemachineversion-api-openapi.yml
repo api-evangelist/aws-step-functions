@@ -1,13 +1,15 @@
+# x-archived-from: amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachineversion-api-openapi.yml
+# x-archived-on: 2026-09-26
 openapi: 3.2.0
 info:
   version: '2016-11-23'
   x-release: v4
-  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.SendTaskSu…'
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
   description: 'Step Functions
 
     Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.'
   x-logo:
-    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
   termsOfService: https://aws.amazon.com/service-terms/
   contact:
@@ -114,9 +116,9 @@ servers:
 security:
 - hmac: []
 tags:
-- name: '#X Amz Target=AWSStepFunctions.SendTaskSuccess'
+- name: '#X Amz Target=AWSStepFunctions.DeleteStateMachineVersion'
 paths:
-  /#X-Amz-Target=AWSStepFunctions.SendTaskSuccess:
+  /#X-Amz-Target=AWSStepFunctions.DeleteStateMachineVersion:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -126,45 +128,80 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
-      operationId: SendTaskSuccess
-      description: Used by activity workers and task states using the callback pattern to report that the task identified by the taskToken completed successfully.
+      operationId: DeleteStateMachineVersion
+      description: 'Deletes a state machine version. After you delete a version, you can''t call StartExecution using that version''s ARN or use the version with a state machine alias.
+
+
+        Deleting a state machine version won''t terminate its in-progress executions.
+
+
+        You can''t delete a state machine version currently referenced by one or more aliases. Before you delete a version, you must either delete the aliases or update them to point to another state machine version.
+
+
+        Related operations:
+
+
+        PublishStateMachineVersion
+
+
+        ListStateMachineVersions'
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SendTaskSuccessOutput'
+                $ref: '#/components/schemas/DeleteStateMachineVersionOutput'
+              examples:
+                DeleteStateMachineVersion200Example:
+                  summary: Default DeleteStateMachineVersion 200
+                  x-microcks-default: true
+                  value: {}
         '480':
-          description: TaskDoesNotExist
+          description: ValidationException
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TaskDoesNotExist'
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DeleteStateMachineVersion480Example:
+                  summary: Default DeleteStateMachineVersion 480
+                  x-microcks-default: true
+                  value: example-value
         '481':
-          description: InvalidOutput
+          description: InvalidArn
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InvalidOutput'
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                DeleteStateMachineVersion481Example:
+                  summary: Default DeleteStateMachineVersion 481
+                  x-microcks-default: true
+                  value: example-value
         '482':
-          description: InvalidToken
+          description: ConflictException
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InvalidToken'
-        '483':
-          description: TaskTimedOut
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TaskTimedOut'
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteStateMachineVersion482Example:
+                  summary: Default DeleteStateMachineVersion 482
+                  x-microcks-default: true
+                  value: example-value
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SendTaskSuccessInput'
+              $ref: '#/components/schemas/DeleteStateMachineVersionInput'
+            examples:
+              DeleteStateMachineVersionRequestExample:
+                summary: Default DeleteStateMachineVersion request
+                x-microcks-default: true
+                value:
+                  stateMachineVersionArn: arn:aws:service:us-east-1:123456789012:resource/example
       parameters:
       - name: X-Amz-Target
         in: header
@@ -172,72 +209,17 @@ paths:
         schema:
           type: string
           enum:
-          - AWSStepFunctions.SendTaskSuccess
-      summary: AWS Step Functions - Send Task Success
+          - AWSStepFunctions.DeleteStateMachineVersion
+      summary: Amazon Delete State Machine Version
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
       tags:
-      - '#X Amz Target=AWSStepFunctions.SendTaskSuccess'
+      - '#X Amz Target=AWSStepFunctions.DeleteStateMachineVersion'
 components:
-  schemas:
-    TaskDoesNotExist: {}
-    InvalidToken: {}
-    SendTaskSuccessInput:
-      type: object
-      required:
-      - taskToken
-      - output
-      title: SendTaskSuccessInput
-      properties:
-        taskToken:
-          allOf:
-          - $ref: '#/components/schemas/TaskToken'
-          - description: The token that represents this task. Task tokens are generated by Step Functions when tasks are assigned to a worker, or in the <a href="https://docs.aws.amazon.com/step-functions/latest/dg/input-output-contextobject.html">context object</a> when a workflow enters a task state. See <a>GetActivityTaskOutput$taskToken</a>.
-        output:
-          allOf:
-          - $ref: '#/components/schemas/SensitiveData'
-          - description: The JSON output of the task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
-    InvalidOutput: {}
-    TaskToken:
-      type: string
-      minLength: 1
-      maxLength: 1024
-    SendTaskSuccessOutput:
-      type: object
-      properties: {}
-    SensitiveData:
-      type: string
-      maxLength: 262144
-      format: password
-    TaskTimedOut: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -248,12 +230,57 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ValidationException: {}
+    ConflictException: {}
+    InvalidArn: {}
+    DeleteStateMachineVersionInput:
+      type: object
+      required:
+      - stateMachineVersionArn
+      title: DeleteStateMachineVersionInput
+      properties:
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/LongArn'
+          - description: The Amazon Resource Name (ARN) of the state machine version to delete.
+    LongArn:
+      type: string
+      minLength: 1
+      maxLength: 2000
+    DeleteStateMachineVersionOutput:
+      type: object
+      properties: {}
   securitySchemes:
     hmac:
       type: apiKey

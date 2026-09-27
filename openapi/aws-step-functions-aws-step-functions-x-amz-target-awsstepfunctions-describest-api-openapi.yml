@@ -1,0 +1,358 @@
+openapi: 3.2.0
+info:
+  version: '2016-11-23'
+  x-release: v4
+  title: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
+  description: 'Step Functions
+
+    Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.'
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: states
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/states-2016-11-23.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: https://states.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS SFN multi-region endpoint
+- url: http://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+- url: https://states.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
+paths:
+  /#X-Amz-Target=AWSStepFunctions.DescribeStateMachineAlias:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeStateMachineAlias
+      description: 'Returns details about a state machine alias.
+
+
+        Related operations:
+
+
+        CreateStateMachineAlias
+
+
+        ListStateMachineAliases
+
+
+        UpdateStateMachineAlias
+
+
+        DeleteStateMachineAlias'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeStateMachineAliasOutput'
+              examples:
+                DescribeStateMachineAlias200Example:
+                  summary: Default DescribeStateMachineAlias 200
+                  x-microcks-default: true
+                  value:
+                    stateMachineAliasArn: arn:aws:service:us-east-1:123456789012:resource/example
+                    name: MyResource
+                    description: example-value
+                    routingConfiguration: example-value
+                    creationDate: example-value
+                    updateDate: example-value
+        '480':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+              examples:
+                DescribeStateMachineAlias480Example:
+                  summary: Default DescribeStateMachineAlias 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                DescribeStateMachineAlias481Example:
+                  summary: Default DescribeStateMachineAlias 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: ResourceNotFound
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFound'
+              examples:
+                DescribeStateMachineAlias482Example:
+                  summary: Default DescribeStateMachineAlias 482
+                  x-microcks-default: true
+                  value: example-value
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeStateMachineAliasInput'
+            examples:
+              DescribeStateMachineAliasRequestExample:
+                summary: Default DescribeStateMachineAlias request
+                x-microcks-default: true
+                value:
+                  stateMachineAliasArn: arn:aws:service:us-east-1:123456789012:resource/example
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSStepFunctions.DescribeStateMachineAlias
+      summary: Amazon Describe State Machine Alias
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
+components:
+  schemas:
+    ValidationException: {}
+    Name:
+      type: string
+      minLength: 1
+      maxLength: 80
+    ResourceNotFound: {}
+    RoutingConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RoutingConfigurationListItem'
+      minItems: 1
+      maxItems: 2
+    RoutingConfigurationListItem:
+      type: object
+      required:
+      - stateMachineVersionArn
+      - weight
+      properties:
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: <p>The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in the routing configuration.</p> <p>If you specify the ARN of a second version, it must belong to the same state machine as the first version.</p>
+        weight:
+          allOf:
+          - $ref: '#/components/schemas/VersionWeight'
+          - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
+      description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
+    Timestamp:
+      type: string
+      format: date-time
+    InvalidArn: {}
+    VersionWeight:
+      type: integer
+      minimum: 0
+      maximum: 100
+    DescribeStateMachineAliasOutput:
+      type: object
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the state machine alias.
+        description:
+          allOf:
+          - $ref: '#/components/schemas/AliasDescription'
+          - description: A description of the alias.
+        routingConfiguration:
+          allOf:
+          - $ref: '#/components/schemas/RoutingConfigurationList'
+          - description: The routing configuration of the alias.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date the state machine alias was created.
+        updateDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: <p>The date the state machine alias was last updated.</p> <p>For a newly created state machine, this is the same as the creation date.</p>
+    DescribeStateMachineAliasInput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      title: DescribeStateMachineAliasInput
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias.
+    AliasDescription:
+      type: string
+      maxLength: 256
+      format: password
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/states/
+x-hasEquivalentPaths: true

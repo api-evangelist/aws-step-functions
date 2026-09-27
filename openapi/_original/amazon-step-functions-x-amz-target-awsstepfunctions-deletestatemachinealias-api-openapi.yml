@@ -1,3 +1,5 @@
+# x-archived-from: amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachinealias-api-openapi.yml
+# x-archived-on: 2026-09-26
 openapi: 3.2.0
 info:
   version: '2016-11-23'
@@ -7,7 +9,7 @@ info:
 
     Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual workflows.'
   x-logo:
-    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
   termsOfService: https://aws.amazon.com/service-terms/
   contact:
@@ -114,9 +116,9 @@ servers:
 security:
 - hmac: []
 tags:
-- name: '#X Amz Target=AWSStepFunctions.DeleteStateMachine'
+- name: '#X Amz Target=AWSStepFunctions.DeleteStateMachineAlias'
 paths:
-  /#X-Amz-Target=AWSStepFunctions.DeleteStateMachine:
+  /#X-Amz-Target=AWSStepFunctions.DeleteStateMachineAlias:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -126,42 +128,94 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
-      operationId: DeleteStateMachine
-      description: 'Deletes a state machine. This is an asynchronous operation: It sets the state machine''s status to DELETING and begins the deletion process.
+      operationId: DeleteStateMachineAlias
+      description: 'Deletes a state machine alias.
 
 
-        If the given state machine Amazon Resource Name (ARN) is a qualified state machine ARN, it will fail with ValidationException.
+        After you delete a state machine alias, you can''t use it to start executions. When you delete a state machine alias, Step Functions doesn''t delete the state machine versions that alias references.
 
 
-        A qualified state machine ARN refers to a Distributed Map state defined within a state machine. For example, the qualified state machine ARN arn:partition:states:region:account-id:stateMachine:stateMachineName/mapStateLabel refers to a Distributed Map state with a label mapStateLabel in the state machine named stateMachineName.
+        Related operations:
 
 
-        For EXPRESS state machines, the deletion will happen eventually (usually less than a minute). Running executions may emit logs after DeleteStateMachine API is called.'
+        CreateStateMachineAlias
+
+
+        DescribeStateMachineAlias
+
+
+        ListStateMachineAliases
+
+
+        UpdateStateMachineAlias'
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DeleteStateMachineOutput'
+                $ref: '#/components/schemas/DeleteStateMachineAliasOutput'
+              examples:
+                DeleteStateMachineAlias200Example:
+                  summary: Default DeleteStateMachineAlias 200
+                  x-microcks-default: true
+                  value: {}
         '480':
-          description: InvalidArn
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InvalidArn'
-        '481':
           description: ValidationException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationException'
+              examples:
+                DeleteStateMachineAlias480Example:
+                  summary: Default DeleteStateMachineAlias 480
+                  x-microcks-default: true
+                  value: example-value
+        '481':
+          description: InvalidArn
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidArn'
+              examples:
+                DeleteStateMachineAlias481Example:
+                  summary: Default DeleteStateMachineAlias 481
+                  x-microcks-default: true
+                  value: example-value
+        '482':
+          description: ResourceNotFound
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFound'
+              examples:
+                DeleteStateMachineAlias482Example:
+                  summary: Default DeleteStateMachineAlias 482
+                  x-microcks-default: true
+                  value: example-value
+        '483':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+              examples:
+                DeleteStateMachineAlias483Example:
+                  summary: Default DeleteStateMachineAlias 483
+                  x-microcks-default: true
+                  value: example-value
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DeleteStateMachineInput'
+              $ref: '#/components/schemas/DeleteStateMachineAliasInput'
+            examples:
+              DeleteStateMachineAliasRequestExample:
+                summary: Default DeleteStateMachineAlias request
+                x-microcks-default: true
+                value:
+                  stateMachineAliasArn: arn:aws:service:us-east-1:123456789012:resource/example
       parameters:
       - name: X-Amz-Target
         in: header
@@ -169,61 +223,17 @@ paths:
         schema:
           type: string
           enum:
-          - AWSStepFunctions.DeleteStateMachine
-      summary: AWS Step Functions - Delete State Machine
+          - AWSStepFunctions.DeleteStateMachineAlias
+      summary: Amazon Delete State Machine Alias
       x-microcks-operation:
         delay: 0
         dispatcher: FALLBACK
       tags:
-      - '#X Amz Target=AWSStepFunctions.DeleteStateMachine'
+      - '#X Amz Target=AWSStepFunctions.DeleteStateMachineAlias'
 components:
-  schemas:
-    InvalidArn: {}
-    ValidationException: {}
-    DeleteStateMachineInput:
-      type: object
-      required:
-      - stateMachineArn
-      title: DeleteStateMachineInput
-      properties:
-        stateMachineArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the state machine to delete.
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
-    DeleteStateMachineOutput:
-      type: object
-      properties: {}
   parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -234,12 +244,58 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    ValidationException: {}
+    ResourceNotFound: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    ConflictException: {}
+    DeleteStateMachineAliasInput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      title: DeleteStateMachineAliasInput
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias to delete.
+    InvalidArn: {}
+    DeleteStateMachineAliasOutput:
+      type: object
+      properties: {}
   securitySchemes:
     hmac:
       type: apiKey
