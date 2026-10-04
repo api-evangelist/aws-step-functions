@@ -90,8 +90,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.createstat….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat…
   properties:
   - type: OpenAPI
     url: >-
@@ -118,8 +119,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.deletestat….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat…
   properties:
   - type: OpenAPI
     url: >-
@@ -146,8 +148,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.describest….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…
   properties:
   - type: OpenAPI
     url: >-
@@ -174,8 +177,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.liststatem….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.ListStateM…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.ListStateM…
   properties:
   - type: OpenAPI
     url: >-
@@ -202,8 +206,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.publishsta….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta…
   properties:
   - type: OpenAPI
     url: >-
@@ -230,8 +235,9 @@ apis:
     operation(s) for aws step functions #x amz target=awsstepfunctions.updatestat….
   humanURL: https://aws.amazon.com/step-functions/
   baseURL: https://states.{region}.amazonaws.com
-  tags:
-  - 'AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateStat…'
+  tags: []
+  tags_raw:
+  - AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateStat…
   properties:
   - type: OpenAPI
     url: >-
