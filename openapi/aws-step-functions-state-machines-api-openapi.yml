@@ -60,41 +60,12 @@ paths:
           $ref: '#/components/responses/Conflict'
 components:
   schemas:
-    LoggingConfiguration:
+    TracingConfiguration:
       type: object
       properties:
-        level:
-          type: string
-          enum:
-          - ALL
-          - ERROR
-          - FATAL
-          - false
-          default: false
-        includeExecutionData:
+        enabled:
           type: boolean
-        destinations:
-          type: array
-          items:
-            type: object
-            properties:
-              cloudWatchLogsLogGroup:
-                type: object
-                properties:
-                  logGroupArn:
-                    type: string
-    CreateStateMachineResponse:
-      type: object
-      properties:
-        stateMachineArn:
-          type: string
-          description: ARN identifying the created state machine
-        creationDate:
-          type: number
-          description: Unix timestamp of creation
-        stateMachineVersionArn:
-          type: string
-          description: ARN of version 1 if publish was true
+          default: false
     Tag:
       type: object
       required:
@@ -107,26 +78,13 @@ components:
         value:
           type: string
           description: Tag value
-    TracingConfiguration:
+    Error:
       type: object
       properties:
-        enabled:
-          type: boolean
-          default: false
-    EncryptionConfiguration:
-      type: object
-      properties:
-        type:
+        message:
           type: string
-          enum:
-          - AWS_OWNED_KEY
-          - CUSTOMER_MANAGED_KMS_KEY
-        kmsKeyId:
+        code:
           type: string
-        kmsDataKeyReusePeriodSeconds:
-          type: integer
-          minimum: 60
-          maximum: 900
     CreateStateMachineRequest:
       type: object
       required:
@@ -174,26 +132,55 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Tag'
-    Error:
+    LoggingConfiguration:
       type: object
       properties:
-        message:
+        level:
           type: string
-        code:
+          enum:
+          - ALL
+          - ERROR
+          - FATAL
+          - false
+          default: false
+        includeExecutionData:
+          type: boolean
+        destinations:
+          type: array
+          items:
+            type: object
+            properties:
+              cloudWatchLogsLogGroup:
+                type: object
+                properties:
+                  logGroupArn:
+                    type: string
+    EncryptionConfiguration:
+      type: object
+      properties:
+        type:
           type: string
-  responses:
-    BadRequest:
-      description: Invalid request parameters
-      content:
-        application/x-amz-json-1.0:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Conflict:
-      description: Resource conflict
-      content:
-        application/x-amz-json-1.0:
-          schema:
-            $ref: '#/components/schemas/Error'
+          enum:
+          - AWS_OWNED_KEY
+          - CUSTOMER_MANAGED_KMS_KEY
+        kmsKeyId:
+          type: string
+        kmsDataKeyReusePeriodSeconds:
+          type: integer
+          minimum: 60
+          maximum: 900
+    CreateStateMachineResponse:
+      type: object
+      properties:
+        stateMachineArn:
+          type: string
+          description: ARN identifying the created state machine
+        creationDate:
+          type: number
+          description: Unix timestamp of creation
+        stateMachineVersionArn:
+          type: string
+          description: ARN of version 1 if publish was true
   parameters:
     XAmzTarget-CreateStateMachine:
       name: X-Amz-Target
@@ -203,6 +190,19 @@ components:
         type: string
         enum:
         - AmazonStates.CreateStateMachine
+  responses:
+    Conflict:
+      description: Resource conflict
+      content:
+        application/x-amz-json-1.0:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadRequest:
+      description: Invalid request parameters
+      content:
+        application/x-amz-json-1.0:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     awsSigV4:
       type: apiKey

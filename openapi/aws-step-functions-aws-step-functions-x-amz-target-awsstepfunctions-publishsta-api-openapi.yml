@@ -253,12 +253,28 @@ paths:
       - 'AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta…'
 components:
   schemas:
+    ConflictException: {}
     ServiceQuotaExceededException: {}
-    StateMachineDoesNotExist: {}
-    VersionDescription:
+    PublishStateMachineVersionOutput:
+      type: object
+      required:
+      - creationDate
+      - stateMachineVersionArn
+      properties:
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date the version was created.
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) (ARN) that identifies the state machine version.
+    RevisionId:
       type: string
-      maxLength: 256
-      format: password
+    Timestamp:
+      type: string
+      format: date-time
+    StateMachineDeleting: {}
     PublishStateMachineVersionInput:
       type: object
       required:
@@ -277,54 +293,20 @@ components:
           allOf:
           - $ref: '#/components/schemas/VersionDescription'
           - description: An optional description of the state machine version.
-    StateMachineDeleting: {}
     ValidationException: {}
+    VersionDescription:
+      type: string
+      maxLength: 256
+      format: password
     InvalidArn: {}
+    StateMachineDoesNotExist: {}
     Arn:
       type: string
       minLength: 1
       maxLength: 256
-    Timestamp:
-      type: string
-      format: date-time
-    ConflictException: {}
-    PublishStateMachineVersionOutput:
-      type: object
-      required:
-      - creationDate
-      - stateMachineVersionArn
-      properties:
-        creationDate:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date the version was created.
-        stateMachineVersionArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) (ARN) that identifies the state machine version.
-    RevisionId:
-      type: string
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -341,8 +323,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

@@ -221,34 +221,50 @@ paths:
       tags:
       - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
 components:
+  parameters:
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    ResourceNotFound: {}
-    AliasDescription:
-      type: string
-      maxLength: 256
-      format: password
-    RoutingConfigurationList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RoutingConfigurationListItem'
-      minItems: 1
-      maxItems: 2
-    DescribeStateMachineAliasInput:
-      type: object
-      required:
-      - stateMachineAliasArn
-      title: DescribeStateMachineAliasInput
-      properties:
-        stateMachineAliasArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the state machine alias.
-    ValidationException: {}
-    InvalidArn: {}
-    Name:
-      type: string
-      minLength: 1
-      maxLength: 80
     RoutingConfigurationListItem:
       type: object
       required:
@@ -264,10 +280,12 @@ components:
           - $ref: '#/components/schemas/VersionWeight'
           - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
       description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
+    RoutingConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RoutingConfigurationListItem'
+      minItems: 1
+      maxItems: 2
     VersionWeight:
       type: integer
       minimum: 0
@@ -302,49 +320,31 @@ components:
           allOf:
           - $ref: '#/components/schemas/Timestamp'
           - description: <p>The date the state machine alias was last updated.</p> <p>For a newly created state machine, this is the same as the creation date.</p>
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
+    DescribeStateMachineAliasInput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      title: DescribeStateMachineAliasInput
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias.
+    Name:
+      type: string
+      minLength: 1
+      maxLength: 80
+    ResourceNotFound: {}
+    ValidationException: {}
+    InvalidArn: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    AliasDescription:
+      type: string
+      maxLength: 256
+      format: password
   securitySchemes:
     hmac:
       type: apiKey

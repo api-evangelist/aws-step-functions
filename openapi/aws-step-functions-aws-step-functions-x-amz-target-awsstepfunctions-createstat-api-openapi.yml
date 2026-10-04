@@ -276,21 +276,8 @@ paths:
       - 'AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat…'
 components:
   schemas:
+    ConflictException: {}
     ServiceQuotaExceededException: {}
-    ResourceNotFound: {}
-    AliasDescription:
-      type: string
-      maxLength: 256
-      format: password
-    RoutingConfigurationList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RoutingConfigurationListItem'
-      minItems: 1
-      maxItems: 2
-    StateMachineDeleting: {}
-    ValidationException: {}
-    InvalidArn: {}
     RoutingConfigurationListItem:
       type: object
       required:
@@ -306,33 +293,12 @@ components:
           - $ref: '#/components/schemas/VersionWeight'
           - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
       description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
-    VersionWeight:
-      type: integer
-      minimum: 0
-      maximum: 100
-    Timestamp:
-      type: string
-      format: date-time
-    ConflictException: {}
-    CreateStateMachineAliasOutput:
-      type: object
-      required:
-      - stateMachineAliasArn
-      - creationDate
-      properties:
-        stateMachineAliasArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) that identifies the created state machine alias.
-        creationDate:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date the state machine alias was created.
-    InvalidName: {}
+    RoutingConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RoutingConfigurationListItem'
+      minItems: 1
+      maxItems: 2
     CreateStateMachineAliasInput:
       type: object
       required:
@@ -352,32 +318,48 @@ components:
           allOf:
           - $ref: '#/components/schemas/RoutingConfigurationList'
           - description: The routing configuration of a state machine alias. The routing configuration shifts execution traffic between two state machine versions. <code>routingConfiguration</code> contains an array of <code>RoutingConfig</code> objects that specify up to two state machine versions. Step Functions then randomly choses which version to run an execution with based on the weight assigned to each <code>RoutingConfig</code>.
+    VersionWeight:
+      type: integer
+      minimum: 0
+      maximum: 100
+    Timestamp:
+      type: string
+      format: date-time
+    StateMachineDeleting: {}
     CharacterRestrictedName:
       type: string
       pattern: ^(?=.*[a-zA-Z_\-\.])[a-zA-Z0-9_\-\.]+$
       minLength: 1
       maxLength: 80
+    ResourceNotFound: {}
+    ValidationException: {}
+    CreateStateMachineAliasOutput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      - creationDate
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) that identifies the created state machine alias.
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date the state machine alias was created.
+    InvalidArn: {}
+    InvalidName: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    AliasDescription:
+      type: string
+      maxLength: 256
+      format: password
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -394,8 +376,26 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
