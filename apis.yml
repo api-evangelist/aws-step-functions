@@ -257,6 +257,12 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/step-functions/faqs/
 common:
+- type: Plans
+  url: plans/aws-step-functions-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aws-step-functions-rate-limits.yml
+- type: FinOps
+  url: finops/aws-step-functions-finops.yml
 - type: CapabilityMap
   url: capabilities/aws-step-functions-capability-edges.yml
   name: AWS Step Functions Business Capability Map
