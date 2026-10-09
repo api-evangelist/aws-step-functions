@@ -1,19 +1,55 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/aws-step-functions-openapi.json
+source: openapi/aws-step-functions-state-machines-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api-openapi.yml, openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api-openapi.yml,
+  openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
-  operations: 26
+  operations: 27
   by_action_class:
-    acting: 26
+    acting: 20
+    connected: 7
   by_consequence:
-    write: 22
+    write: 16
+    read: 7
     physical: 3
     safety-critical: 1
   human_in_the_loop_required: 1
 operations:
+- path: /
+  method: post
+  operationId: createStateMachine
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
 - path: /#X-Amz-Target=AWSStepFunctions.CreateActivity
   method: post
   operationId: CreateActivity
@@ -162,114 +198,72 @@ operations:
   method: post
   operationId: GetActivityTask
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.GetExecutionHistory
   method: post
   operationId: GetExecutionHistory
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.ListActivities
   method: post
   operationId: ListActivities
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.ListExecutions
   method: post
   operationId: ListExecutions
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.ListMapRuns
   method: post
   operationId: ListMapRuns
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.ListStateMachines
   method: post
   operationId: ListStateMachines
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.ListTagsForResource
   method: post
   operationId: ListTagsForResource
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=AWSStepFunctions.SendTaskFailure
   method: post
   operationId: SendTaskFailure
