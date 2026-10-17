@@ -221,75 +221,31 @@ paths:
       tags:
       - 'AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt…'
 components:
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    RoutingConfigurationListItem:
-      type: object
-      required:
-      - stateMachineVersionArn
-      - weight
-      properties:
-        stateMachineVersionArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: <p>The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in the routing configuration.</p> <p>If you specify the ARN of a second version, it must belong to the same state machine as the first version.</p>
-        weight:
-          allOf:
-          - $ref: '#/components/schemas/VersionWeight'
-          - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
-      description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
-    RoutingConfigurationList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RoutingConfigurationListItem'
-      minItems: 1
-      maxItems: 2
+    AliasDescription:
+      type: string
+      maxLength: 256
+      format: password
+    InvalidArn: {}
+    ResourceNotFound: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
     VersionWeight:
       type: integer
       minimum: 0
       maximum: 100
+    DescribeStateMachineAliasInput:
+      type: object
+      required:
+      - stateMachineAliasArn
+      title: DescribeStateMachineAliasInput
+      properties:
+        stateMachineAliasArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the state machine alias.
     Timestamp:
       type: string
       format: date-time
@@ -320,31 +276,75 @@ components:
           allOf:
           - $ref: '#/components/schemas/Timestamp'
           - description: <p>The date the state machine alias was last updated.</p> <p>For a newly created state machine, this is the same as the creation date.</p>
-    DescribeStateMachineAliasInput:
+    RoutingConfigurationListItem:
       type: object
       required:
-      - stateMachineAliasArn
-      title: DescribeStateMachineAliasInput
+      - stateMachineVersionArn
+      - weight
       properties:
-        stateMachineAliasArn:
+        stateMachineVersionArn:
           allOf:
           - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the state machine alias.
+          - description: <p>The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in the routing configuration.</p> <p>If you specify the ARN of a second version, it must belong to the same state machine as the first version.</p>
+        weight:
+          allOf:
+          - $ref: '#/components/schemas/VersionWeight'
+          - description: The percentage of traffic you want to route to the second state machine version. The sum of the weights in the routing configuration must be equal to 100.
+      description: Contains details about the routing configuration of a state machine alias. In a routing configuration, you define an array of objects that specify up to two state machine versions. You also specify the percentage of traffic to be routed to each version.
+    RoutingConfigurationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RoutingConfigurationListItem'
+      minItems: 1
+      maxItems: 2
+    ValidationException: {}
     Name:
       type: string
       minLength: 1
       maxLength: 80
-    ResourceNotFound: {}
-    ValidationException: {}
-    InvalidArn: {}
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
-    AliasDescription:
-      type: string
-      maxLength: 256
-      format: password
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

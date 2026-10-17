@@ -483,8 +483,61 @@ paths:
           default: cn-north-1
       description: The AWS SFN endpoint for China (Beijing) and China (Ningxia)
 components:
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
+    InvalidArn: {}
+    ResourceNotFound: {}
+    DeleteStateMachineAliasOutput:
+      type: object
+      properties: {}
     ConflictException: {}
+    ValidationException: {}
     DeleteStateMachineAliasInput:
       type: object
       required:
@@ -495,16 +548,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/Arn'
           - description: The Amazon Resource Name (ARN) of the state machine alias to delete.
-    DeleteStateMachineAliasOutput:
-      type: object
-      properties: {}
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
-    InvalidArn: {}
-    ResourceNotFound: {}
-    ValidationException: {}
     LongArn:
       type: string
       minLength: 1
@@ -522,49 +565,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/LongArn'
           - description: The Amazon Resource Name (ARN) of the state machine version to delete.
-  parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

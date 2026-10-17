@@ -253,28 +253,14 @@ paths:
       - 'AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta…'
 components:
   schemas:
-    ConflictException: {}
     ServiceQuotaExceededException: {}
-    PublishStateMachineVersionOutput:
-      type: object
-      required:
-      - creationDate
-      - stateMachineVersionArn
-      properties:
-        creationDate:
-          allOf:
-          - $ref: '#/components/schemas/Timestamp'
-          - description: The date the version was created.
-        stateMachineVersionArn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) (ARN) that identifies the state machine version.
-    RevisionId:
-      type: string
-    Timestamp:
-      type: string
-      format: date-time
     StateMachineDeleting: {}
+    InvalidArn: {}
+    StateMachineDoesNotExist: {}
+    Arn:
+      type: string
+      minLength: 1
+      maxLength: 256
     PublishStateMachineVersionInput:
       type: object
       required:
@@ -293,36 +279,32 @@ components:
           allOf:
           - $ref: '#/components/schemas/VersionDescription'
           - description: An optional description of the state machine version.
-    ValidationException: {}
+    RevisionId:
+      type: string
+    Timestamp:
+      type: string
+      format: date-time
+    ConflictException: {}
+    PublishStateMachineVersionOutput:
+      type: object
+      required:
+      - creationDate
+      - stateMachineVersionArn
+      properties:
+        creationDate:
+          allOf:
+          - $ref: '#/components/schemas/Timestamp'
+          - description: The date the version was created.
+        stateMachineVersionArn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) (ARN) that identifies the state machine version.
     VersionDescription:
       type: string
       maxLength: 256
       format: password
-    InvalidArn: {}
-    StateMachineDoesNotExist: {}
-    Arn:
-      type: string
-      minLength: 1
-      maxLength: 256
+    ValidationException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
@@ -335,14 +317,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
