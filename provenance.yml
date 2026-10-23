@@ -10,161 +10,161 @@ artifacts:
     method: derived
     evidence: declared in the artifact
   collections/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api.opencollection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   collections/aws-step-functions.opencollection.json:
     method: derived
     evidence: openapi/aws-step-functions
@@ -694,6 +694,12 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   front-door-ai/2026-09-17.yml:
+    method: unknown
+    evidence: no authorship recorded
+  integrations/_index.yml:
+    method: generated
+    evidence: carries an API Evangelist house phrase
+  integrations/aws-step-functions-integration-edges.yml:
     method: unknown
     evidence: no authorship recorded
   json-ld/aws-step-functions-context.jsonld:
@@ -1737,127 +1743,7 @@ artifacts:
   json-structure/step-functions-validationexception-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -1941,6 +1827,53 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-createstatemachinealias-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachinealias-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachineversion-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-describestatemachinealias-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-liststatemachinealiases-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-liststatemachineversions-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-publishstatemachineversion-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/_original/amazon-step-functions-x-amz-target-awsstepfunctions-updatestatemachinealias-api-openapi.yml:
+    method: harvested
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
   openapi/_original/aws-step-functions-openapi.json:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
@@ -1949,192 +1882,111 @@ artifacts:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-createstatemachinealias-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachinealias-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-deletestatemachineversion-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-describestatemachinealias-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-liststatemachinealiases-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-liststatemachineversions-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-publishstatemachineversion-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
-  openapi/amazon-step-functions-x-amz-target-awsstepfunctions-updatestatemachinealias-api-openapi.yml:
-    method: unknown
-    evidence: no authorship recorded
+  openapi/aws-step-functions-aws-step-functions-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-createstat-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-deletestat-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-describest-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-liststatem-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-publishsta-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  openapi/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-updatestat-api-openapi.yml:
+    method: derived
+    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/aws-step-functions-state-machines-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/aws-step-functions-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   postman/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatemaprun-api
+    method: unknown
+    evidence: no authorship recorded
   postman/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api.postman_collection.json:
-    method: derived
-    evidence: openapi/aws-step-functions-x-amz-target-awsstepfunctions-updatestatemachine-api
+    method: unknown
+    evidence: no authorship recorded
   rate-limits/aws-step-functions-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
