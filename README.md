@@ -1,4 +1,4 @@
-# AWS Step Functions (aws-step-functions)
+# AWS Step Functions
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,67 +66,269 @@
 
 AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and microservices using visual workflows, integrating with AWS services and supporting error handling and retries.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/aws-step-functions/refs/heads/main/apis.yml)
+**Areas:** AWS · iPaaS · Orchestration · Serverless
 
-## Scope
+## AWS Step Functions on APIs.io
 
-- **Type:** Index
+Everything profiled for AWS Step Functions is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aws-step-functions/](https://apis.io/providers/aws-step-functions/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (9)
 
-- AWS
-- iPaaS
-- Orchestration
-- Serverless
+- [AWS Step Functions State Machines API](https://apis.io/apis/aws-step-functions/aws-step-functions-state-machines-api/) — Create, describe, update, delete, and list state machines
+- [AWS Step Functions AWS Step Functions API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-api/) — The AWS Step Functions API from AWS Step Functions — 26 operation(s) for aws step functions.
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-createstat-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.CreateStat… API from AWS Step Functions — 1 operation(s) for aws step functions #x amz…
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-deletestat-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.DeleteStat… API from AWS Step Functions — 2 operation(s) for aws step functions #x amz…
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-describest-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.DescribeSt… API from AWS Step Functions — 1 operation(s) for aws step functions #x amz…
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.ListStateM… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-liststatem-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.ListStateM… API from AWS Step Functions — 2 operation(s) for aws step functions #x amz…
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-publishsta-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.PublishSta… API from AWS Step Functions — 1 operation(s) for aws step functions #x amz…
+- [AWS Step Functions AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateStat… API](https://apis.io/apis/aws-step-functions/aws-step-functions-aws-step-functions-x-amz-target-awsstepfunctions-updatestat-api/) — The AWS Step Functions #X Amz Target=AWSStepFunctions.UpdateStat… API from AWS Step Functions — 1 operation(s) for aws step functions #x amz…
+- [AWS Step Functions Step Functions Operations API](https://apis.io/apis/aws-step-functions/aws-step-functions-operations-api/) — The Step Functions Operations API from AWS Step Functions — 3 operation(s) for step functions operations.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-27
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### AWS Step Functions
+Which operations an agent can call, which act, and which need a human in the loop.
 
-AWS Step Functions is a serverless orchestration service that lets you coordinate distributed applications and microservices using visual workflows, integrating with AWS services and supporting error handling and retries. Define workflows in Amazon States Language with standard and express workflow types.
+- [Aws Step Functions Agentic Access](https://apis.io/agentic-access/aws-step-functions/aws-step-functions-agentic-access/)
 
-- **Human URL:** [https://aws.amazon.com/step-functions/](https://aws.amazon.com/step-functions/)
-- **Base URL:** `https://states.{region}.amazonaws.com`
+#### JSON Schema (173)
 
-#### Tags
+The data models the API reads and writes.
 
-- iPaaS
-- Orchestration
-- Serverless
+- [ActivityDoesNotExist](https://apis.io/schemas/aws-step-functions/step-functions-activitydoesnotexist/)
+- [ActivityFailedEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activityfailedeventdetails/)
+- [ActivityLimitExceeded](https://apis.io/schemas/aws-step-functions/step-functions-activitylimitexceeded/)
+- [ActivityList](https://apis.io/schemas/aws-step-functions/step-functions-activitylist/)
+- [ActivityListItem](https://apis.io/schemas/aws-step-functions/step-functions-activitylistitem/)
+- [ActivityScheduledEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activityscheduledeventdetails/)
+- [ActivityScheduleFailedEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activityschedulefailedeventdetails/)
+- [ActivityStartedEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activitystartedeventdetails/)
+- [ActivitySucceededEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activitysucceededeventdetails/)
+- [ActivityTimedOutEventDetails](https://apis.io/schemas/aws-step-functions/step-functions-activitytimedouteventdetails/)
+- [ActivityWorkerLimitExceeded](https://apis.io/schemas/aws-step-functions/step-functions-activityworkerlimitexceeded/)
+- [Arn](https://apis.io/schemas/aws-step-functions/step-functions-arn/)
+- [BilledDuration](https://apis.io/schemas/aws-step-functions/step-functions-billedduration/)
+- [BilledMemoryUsed](https://apis.io/schemas/aws-step-functions/step-functions-billedmemoryused/)
+- [BillingDetails](https://apis.io/schemas/aws-step-functions/step-functions-billingdetails/)
+- [CloudWatchEventsExecutionDataDetails](https://apis.io/schemas/aws-step-functions/step-functions-cloudwatcheventsexecutiondatadetails/)
+- [CloudWatchLogsLogGroup](https://apis.io/schemas/aws-step-functions/step-functions-cloudwatchlogsloggroup/)
+- [ConnectorParameters](https://apis.io/schemas/aws-step-functions/step-functions-connectorparameters/)
+- [CreateActivityInput](https://apis.io/schemas/aws-step-functions/step-functions-createactivityinput/)
+- [CreateActivityOutput](https://apis.io/schemas/aws-step-functions/step-functions-createactivityoutput/)
+- [CreateStateMachineInput](https://apis.io/schemas/aws-step-functions/step-functions-createstatemachineinput/)
+- [CreateStateMachineOutput](https://apis.io/schemas/aws-step-functions/step-functions-createstatemachineoutput/)
+- [Definition](https://apis.io/schemas/aws-step-functions/step-functions-definition/)
+- [DeleteActivityInput](https://apis.io/schemas/aws-step-functions/step-functions-deleteactivityinput/)
+- [DeleteActivityOutput](https://apis.io/schemas/aws-step-functions/step-functions-deleteactivityoutput/)
+- …and 148 more published on APIs.io
 
-#### Properties
+#### JSON Structure (173)
 
-- [Documentation](https://docs.aws.amazon.com/step-functions/)
-- [Getting Started](https://docs.aws.amazon.com/step-functions/latest/dg/getting-started.html)
-- [OpenAPI](openapi/aws-step-functions-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/aws-step-functions.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/aws-step-functions.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [API Reference](https://docs.aws.amazon.com/step-functions/latest/apireference/Welcome.html)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [Step Functions Activitydoesnotexist Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitydoesnotexist-structure/)
+- [Step Functions Activityfailedeventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activityfailedeventdetails-structure/)
+- [Step Functions Activitylimitexceeded Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitylimitexceeded-structure/)
+- [Step Functions Activitylist Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitylist-structure/)
+- [Step Functions Activitylistitem Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitylistitem-structure/)
+- [Step Functions Activityscheduledeventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activityscheduledeventdetails-structure/)
+- [Step Functions Activityschedulefailedeventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activityschedulefailedeventdetails-structure/)
+- [Step Functions Activitystartedeventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitystartedeventdetails-structure/)
+- [Step Functions Activitysucceededeventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitysucceededeventdetails-structure/)
+- [Step Functions Activitytimedouteventdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activitytimedouteventdetails-structure/)
+- [Step Functions Activityworkerlimitexceeded Structure](https://apis.io/json-structure/aws-step-functions/step-functions-activityworkerlimitexceeded-structure/)
+- [Step Functions Arn Structure](https://apis.io/json-structure/aws-step-functions/step-functions-arn-structure/)
+- [Step Functions Billedduration Structure](https://apis.io/json-structure/aws-step-functions/step-functions-billedduration-structure/)
+- [Step Functions Billedmemoryused Structure](https://apis.io/json-structure/aws-step-functions/step-functions-billedmemoryused-structure/)
+- [Step Functions Billingdetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-billingdetails-structure/)
+- [Step Functions Cloudwatcheventsexecutiondatadetails Structure](https://apis.io/json-structure/aws-step-functions/step-functions-cloudwatcheventsexecutiondatadetails-structure/)
+- [Step Functions Cloudwatchlogsloggroup Structure](https://apis.io/json-structure/aws-step-functions/step-functions-cloudwatchlogsloggroup-structure/)
+- [Step Functions Connectorparameters Structure](https://apis.io/json-structure/aws-step-functions/step-functions-connectorparameters-structure/)
+- [Step Functions Createactivityinput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-createactivityinput-structure/)
+- [Step Functions Createactivityoutput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-createactivityoutput-structure/)
+- [Step Functions Createstatemachineinput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-createstatemachineinput-structure/)
+- [Step Functions Createstatemachineoutput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-createstatemachineoutput-structure/)
+- [Step Functions Definition Structure](https://apis.io/json-structure/aws-step-functions/step-functions-definition-structure/)
+- [Step Functions Deleteactivityinput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-deleteactivityinput-structure/)
+- [Step Functions Deleteactivityoutput Structure](https://apis.io/json-structure/aws-step-functions/step-functions-deleteactivityoutput-structure/)
+- …and 148 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Aws Step Functions Context](https://apis.io/jsonld/aws-step-functions/aws-step-functions-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [AWS Step Functions Vocabulary](https://apis.io/vocabularies/aws-step-functions/aws-step-functions-vocabulary/)
+
+#### Examples (173)
+
+Example requests and responses.
+
+- [Step Functions Activitydoesnotexist Example](https://apis.io/examples/aws-step-functions/step-functions-activitydoesnotexist-example/)
+- [Step Functions Activityfailedeventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activityfailedeventdetails-example/)
+- [Step Functions Activitylimitexceeded Example](https://apis.io/examples/aws-step-functions/step-functions-activitylimitexceeded-example/)
+- [Step Functions Activitylist Example](https://apis.io/examples/aws-step-functions/step-functions-activitylist-example/)
+- [Step Functions Activitylistitem Example](https://apis.io/examples/aws-step-functions/step-functions-activitylistitem-example/)
+- [Step Functions Activityscheduledeventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activityscheduledeventdetails-example/)
+- [Step Functions Activityschedulefailedeventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activityschedulefailedeventdetails-example/)
+- [Step Functions Activitystartedeventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activitystartedeventdetails-example/)
+- [Step Functions Activitysucceededeventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activitysucceededeventdetails-example/)
+- [Step Functions Activitytimedouteventdetails Example](https://apis.io/examples/aws-step-functions/step-functions-activitytimedouteventdetails-example/)
+- [Step Functions Activityworkerlimitexceeded Example](https://apis.io/examples/aws-step-functions/step-functions-activityworkerlimitexceeded-example/)
+- [Step Functions Arn Example](https://apis.io/examples/aws-step-functions/step-functions-arn-example/)
+- [Step Functions Billedduration Example](https://apis.io/examples/aws-step-functions/step-functions-billedduration-example/)
+- [Step Functions Billedmemoryused Example](https://apis.io/examples/aws-step-functions/step-functions-billedmemoryused-example/)
+- [Step Functions Billingdetails Example](https://apis.io/examples/aws-step-functions/step-functions-billingdetails-example/)
+- [Step Functions Cloudwatcheventsexecutiondatadetails Example](https://apis.io/examples/aws-step-functions/step-functions-cloudwatcheventsexecutiondatadetails-example/)
+- [Step Functions Cloudwatchlogsloggroup Example](https://apis.io/examples/aws-step-functions/step-functions-cloudwatchlogsloggroup-example/)
+- [Step Functions Connectorparameters Example](https://apis.io/examples/aws-step-functions/step-functions-connectorparameters-example/)
+- [Step Functions Createactivityinput Example](https://apis.io/examples/aws-step-functions/step-functions-createactivityinput-example/)
+- [Step Functions Createactivityoutput Example](https://apis.io/examples/aws-step-functions/step-functions-createactivityoutput-example/)
+- [Step Functions Createstatemachineinput Example](https://apis.io/examples/aws-step-functions/step-functions-createstatemachineinput-example/)
+- [Step Functions Createstatemachineoutput Example](https://apis.io/examples/aws-step-functions/step-functions-createstatemachineoutput-example/)
+- [Step Functions Definition Example](https://apis.io/examples/aws-step-functions/step-functions-definition-example/)
+- [Step Functions Deleteactivityinput Example](https://apis.io/examples/aws-step-functions/step-functions-deleteactivityinput-example/)
+- [Step Functions Deleteactivityoutput Example](https://apis.io/examples/aws-step-functions/step-functions-deleteactivityoutput-example/)
+- …and 148 more published on APIs.io
+
+#### Collections (53)
+
+Postman and Open Collection request collections.
+
+- [AWS Step Functions](https://apis.io/collections/aws-step-functions/open-aws-step-functions/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-createactivity-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateStateMachine API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-createstatemachine-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DeleteActivity API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-deleteactivity-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DeleteStateMachine API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-deletestatemachine-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeActivity API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-describeactivity-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeExecution API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-describeexecution-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeMapRun API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-describemaprun-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeStateMachine API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-describestatemachine-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.DescribeStateMachineForExecution API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-describestatemachineforexecution-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.GetActivityTask API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-getactivitytask-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.GetExecutionHistory API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-getexecutionhistory-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListActivities API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-listactivities-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListExecutions API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-listexecutions-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListMapRuns API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-listmapruns-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListStateMachines API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-liststatemachines-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.ListTagsForResource API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-listtagsforresource-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.SendTaskFailure API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-sendtaskfailure-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.SendTaskHeartbeat API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-sendtaskheartbeat-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.SendTaskSuccess API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-sendtasksuccess-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.StartExecution API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-startexecution-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.StartSyncExecution API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-startsyncexecution-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.StopExecution API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-stopexecution-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.TagResource API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-tagresource-api/)
+- [AWS Step Functions #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.CreateActivity #X Amz Target=AWSStepFunctions.UntagResource API](https://apis.io/collections/aws-step-functions/open-aws-step-functions-x-amz-target-awsstepfunctions-untagresource-api/)
+- …and 28 more published on APIs.io
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [AWS Step Functions — jsonschema rules](https://apis.io/rules/aws-step-functions/aws-step-functions-jsonschema-spectral-rules/)
+- [AWS Step Functions API Rules](https://apis.io/rules/aws-step-functions/aws-step-functions-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aws Step Functions Authentication](https://apis.io/security/aws-step-functions/aws-step-functions-authentication/)
+- [Aws Step Functions Domain Security](https://apis.io/security/aws-step-functions/aws-step-functions-domain-security/)
+- [Aws Step Functions Trust Center](https://apis.io/security/aws-step-functions/aws-step-functions-trust-center/)
+- [Aws Step Functions Vulnerability Disclosure](https://apis.io/security/aws-step-functions/aws-step-functions-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aws Step Functions Plans Pricing](https://apis.io/plans/aws-step-functions/aws-step-functions-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aws Step Functions Rate Limits](https://apis.io/rate-limits/aws-step-functions/aws-step-functions-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Aws Step Functions Finops](https://apis.io/finops/aws-step-functions/aws-step-functions-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://aws.amazon.com/step-functions/)
 - [Documentation](https://docs.aws.amazon.com/step-functions/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
-- [Support](https://aws.amazon.com/premiumsupport/)
 - [Pricing](https://aws.amazon.com/step-functions/pricing/)
-- [Blog](https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/)
+- [Support](https://aws.amazon.com/premiumsupport/)
 - [Changelog](https://aws.amazon.com/releasenotes/aws-step-functions/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Spectral Rules](rules/aws-step-functions-spectral-rules.yml)
-- [Vocabulary](vocabulary/aws-step-functions-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [Integrations](https://aws.amazon.com/marketplace)
+- [Blog](https://aws.amazon.com/blogs/compute/category/application-services/aws-step-functions/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 51.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 62.4 |
+| Contract governance | 27.3 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 48.8 |
+| Access clarity | 47.4 |
+
+**Agent readiness 30.2** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aws-step-functions/](https://apis.io/providers/aws-step-functions/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AWS Step Functions: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aws-step-functions/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
